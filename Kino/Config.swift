@@ -14,6 +14,7 @@ class ConfigSingleton {
     
     subscript(key: String) -> AnyObject {
         get {
+            DLog("Retrieved value: \(Config.valueForKey(key)) for key: \(key)")
             return Config.valueForKey(key)
         }
     }
@@ -35,32 +36,31 @@ class ConfigSingleton {
     // MARK: - Public
     func apiDefaultParams() -> NSDictionary {
         return [
-            "api_key" : Config[Vars.API.ApiKey.rawValue],
+            "api_key" : Config[API.ApiKey.rawValue],
         ]
     }
     
 }
 
-struct Vars {
-    //TODO: Try to do the Config with more Dictionaries with the same name that enums classes
-    // MARK: - Values
-    enum API: String {
-        case ApiKey
-        case BasePath
-        case ImageBasePath
-    }
-    
-    enum APIEndPoints : String {
-        // MARK: - Films
-        case UpcomingFilmsEndpoint
-        case NowPlayingFilmsEndpoint
-        case PopularFilmsEndpoint
-        case SearcFilmshEndpoint
-        case FilmByIdEndpoint
-        case FilmReleaseDateEndpoint
-    }
-    
-    enum TMDBFormats: String {
-        case DateFormat
-    }
+//TODO: 🤔Try to do the Config with more Dictionaries with the same name that enums classes🤔
+// MARK: - Values
+enum API: String {
+    case ApiKey
+    case BasePath
+    case ImageBasePath
 }
+
+enum Endpoints : String {
+    // MARK: - Films
+    case UpcomingFilmsEndpoint
+    case NowPlayingFilmsEndpoint
+    case PopularFilmsEndpoint
+    case SearcFilmshEndpoint
+    case FilmByIdEndpoint
+    case FilmReleaseDateEndpoint
+}
+
+enum TMDBFormats: String {
+    case DateFormat
+}
+

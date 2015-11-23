@@ -11,11 +11,21 @@ import UIKit
 class BillboardPresenter : BasePresenter, BillboardEventHandler {
     
     let billboardViewController: BillboardViewController
+    let filmsProvider = FilmsProvider()
+    
     
     weak var billboardRouter: BillboardRouter?
     
     init(_ billboardViewController: BillboardViewController) {
         self.billboardViewController = billboardViewController
+    }
+    
+    func updateView() {
+        self.filmsProvider.popularFilms { (films) -> Void in
+            for film in films {
+                DLog("film: \(film)")
+            }
+        }
     }
     
 }

@@ -16,6 +16,7 @@ extension HTTPClient {
     
     func get<T: Response>(url: NSURL, completion: (T) -> (Void)) {
         let session = NSURLSession.sharedSession()
+        DLog("URL: \(url)")
         session.dataTaskWithURL(url) { (opData, nsurlResponse, opError) -> Void in
             
             if let data = opData {
@@ -30,7 +31,7 @@ extension HTTPClient {
             } else {
                 completion(T.from(NSError(domain:HTTPClientError.Domain.rawValue, code: HTTPClientErrorCode.General.rawValue, userInfo: [NSLocalizedDescriptionKey : "\(Self.self) ❌ General error"])))
             }
-        }
+        }.resume()
     }
     
     func dictionaryFrom(data: NSData) -> (object: AnyObject?, error: NSError?) {

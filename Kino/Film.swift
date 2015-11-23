@@ -10,8 +10,7 @@ import Foundation
 
 struct Film: Parseable {
     
-    static func from(oject: AnyObject) -> (object: Film?, error: NSError?) {
-        return (Film(), nil)
+    static func from(dictionary dictionary: Dictionary<String, AnyObject>) -> (object: Film?, error: NSError?) {
+        return(Film(), nil)
     }
-    
 }

@@ -35,6 +35,7 @@
 		01B856D61C03AAB800504CF0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B856D51C03AAB800504CF0 /* Config.swift */; };
 		01B856D81C03AFEB00504CF0 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01B856D71C03AFEB00504CF0 /* Config.plist */; };
 		01B856DA1C03B2BA00504CF0 /* FilmsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B856D91C03B2BA00504CF0 /* FilmsProvider.swift */; };
+		01B856DD1C03BD0000504CF0 /* URLMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B856DC1C03BD0000504CF0 /* URLMaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		01B856D51C03AAB800504CF0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		01B856D71C03AFEB00504CF0 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		01B856D91C03B2BA00504CF0 /* FilmsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmsProvider.swift; sourceTree = "<group>"; };
+		01B856DC1C03BD0000504CF0 /* URLMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLMaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				019F11A31BFF883600809FE4 /* HTTPClient.swift */,
 				019F11A51BFF884500809FE4 /* KinoHTTPClient */,
 				019F11A81BFF890700809FE4 /* NetTypes */,
+				01B856DB1C03BCEE00504CF0 /* Components */,
 				019F11B81BFFA73C00809FE4 /* Providers */,
 			);
 			name = NET;
@@ -319,6 +322,14 @@
 			name = Providers;
 			sourceTree = "<group>";
 		};
+		01B856DB1C03BCEE00504CF0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				01B856DC1C03BD0000504CF0 /* URLMaker.swift */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -401,6 +412,7 @@
 				01062F9F1BFA7BB1005E7C46 /* ViewControllersDependenciesResolver.swift in Sources */,
 				01062F6A1BFA6639005E7C46 /* Kino.xcdatamodeld in Sources */,
 				015F89BE1BFF7B62009F7D07 /* BaseViewController.swift in Sources */,
+				01B856DD1C03BD0000504CF0 /* URLMaker.swift in Sources */,
 				019F11B31BFF926F00809FE4 /* Parseable.swift in Sources */,
 				0113749F1BFBBE9200464FE9 /* RoutedNavigationController.swift in Sources */,
 				019F11BA1BFFA75700809FE4 /* BaseProvider.swift in Sources */,

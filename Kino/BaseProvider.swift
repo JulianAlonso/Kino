@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BaseProvider {
+class Connector<T: Parseable> {
     
     private let client: HTTPClient
     private let endpoint: String
@@ -19,5 +19,13 @@ class BaseProvider {
         self.endpoint = endpoint
         self.defaultParams = defaultParams
     }
-
+    
+    func connect(parameters: NSDictionary?, completion: (KinoResponse<T>) -> Void) {
+        
+        if let params = parameters {
+            DLog("Received params: \(params)")
+        }
+        
+        self.client.get(URLMaker.url(endpoint: self.endpoint, params: self.defaultParams), completion: completion)
+    }
 }
