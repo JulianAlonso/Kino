@@ -25,5 +25,4 @@ struct KinoResponse<T: Parseable> : Response {
     static func from(error: NSError) -> KinoResponse<T> {
         return self.init(object: nil, error: error)
     }
-    
 }

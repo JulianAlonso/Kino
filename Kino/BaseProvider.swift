@@ -8,18 +8,16 @@
 
 import Foundation
 
-struct BaseProvider {
+class BaseProvider {
     
     private let client: HTTPClient
     private let endpoint: String
-    private let params: [String]
+    private let defaultParams: NSDictionary
     
-    init(htttpClient client: HTTPClient, endpoint: String, params: [String]) {
+    init(htttpClient client: HTTPClient, endpoint: String, defaultParams: NSDictionary) {
         self.client = client
         self.endpoint = endpoint
-        self.params = params
+        self.defaultParams = defaultParams
     }
-    
-    
-    
+
 }
