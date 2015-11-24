@@ -4,3 +4,4 @@ Pods/*
 Podfile.lock
 Notes.md
 iOSInjectionProject/*
+*Config.plist
