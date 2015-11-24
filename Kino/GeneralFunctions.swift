@@ -8,7 +8,7 @@
 
 import Foundation
 
-func DLog(message: String) {
+func DLog(message: Any) {
     #if DEBUG
     print(message)
     #endif

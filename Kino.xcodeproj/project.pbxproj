@@ -24,11 +24,11 @@
 		0113749F1BFBBE9200464FE9 /* RoutedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0113749E1BFBBE9200464FE9 /* RoutedNavigationController.swift */; };
 		011374A21BFBBF2C00464FE9 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011374A11BFBBF2C00464FE9 /* BaseRouter.swift */; };
 		011374A81BFBE39200464FE9 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011374A71BFBE39200464FE9 /* BasePresenter.swift */; };
+		0120FC871C04FAD200E6460E /* PopularFilmsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0120FC861C04FAD200E6460E /* PopularFilmsResponse.swift */; };
 		015F89BE1BFF7B62009F7D07 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F89BD1BFF7B62009F7D07 /* BaseViewController.swift */; };
 		019F11A41BFF883600809FE4 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11A31BFF883600809FE4 /* HTTPClient.swift */; };
 		019F11A71BFF886200809FE4 /* KinoHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11A61BFF886200809FE4 /* KinoHTTPClient.swift */; };
 		019F11AB1BFF896A00809FE4 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11AA1BFF896A00809FE4 /* Response.swift */; };
-		019F11AE1BFF8A1D00809FE4 /* KinoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11AD1BFF8A1D00809FE4 /* KinoResponse.swift */; };
 		019F11B31BFF926F00809FE4 /* Parseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11B21BFF926F00809FE4 /* Parseable.swift */; };
 		019F11B51BFF9F7900809FE4 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11B41BFF9F7900809FE4 /* Film.swift */; };
 		019F11BA1BFFA75700809FE4 /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11B91BFFA75700809FE4 /* BaseProvider.swift */; };
@@ -59,11 +59,11 @@
 		0113749E1BFBBE9200464FE9 /* RoutedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutedNavigationController.swift; sourceTree = "<group>"; };
 		011374A11BFBBF2C00464FE9 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		011374A71BFBE39200464FE9 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		0120FC861C04FAD200E6460E /* PopularFilmsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularFilmsResponse.swift; sourceTree = "<group>"; };
 		015F89BD1BFF7B62009F7D07 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		019F11A31BFF883600809FE4 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		019F11A61BFF886200809FE4 /* KinoHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinoHTTPClient.swift; sourceTree = "<group>"; };
 		019F11AA1BFF896A00809FE4 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		019F11AD1BFF8A1D00809FE4 /* KinoResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinoResponse.swift; sourceTree = "<group>"; };
 		019F11B21BFF926F00809FE4 /* Parseable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parseable.swift; sourceTree = "<group>"; };
 		019F11B41BFF9F7900809FE4 /* Film.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		019F11B91BFFA75700809FE4 /* BaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseProvider.swift; sourceTree = "<group>"; };
@@ -283,7 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				019F11AA1BFF896A00809FE4 /* Response.swift */,
-				019F11AD1BFF8A1D00809FE4 /* KinoResponse.swift */,
+				0120FC861C04FAD200E6460E /* PopularFilmsResponse.swift */,
 			);
 			name = Responses;
 			sourceTree = "<group>";
@@ -408,7 +408,6 @@
 				019F11A71BFF886200809FE4 /* KinoHTTPClient.swift in Sources */,
 				01B856DA1C03B2BA00504CF0 /* FilmsProvider.swift in Sources */,
 				019F11AB1BFF896A00809FE4 /* Response.swift in Sources */,
-				019F11AE1BFF8A1D00809FE4 /* KinoResponse.swift in Sources */,
 				01062F9F1BFA7BB1005E7C46 /* ViewControllersDependenciesResolver.swift in Sources */,
 				01062F6A1BFA6639005E7C46 /* Kino.xcdatamodeld in Sources */,
 				015F89BE1BFF7B62009F7D07 /* BaseViewController.swift in Sources */,
@@ -418,6 +417,7 @@
 				019F11BA1BFFA75700809FE4 /* BaseProvider.swift in Sources */,
 				01062F9D1BFA7B9B005E7C46 /* PresentersDependenciesResolver.swift in Sources */,
 				01062F7D1BFA684C005E7C46 /* GeneralFunctions.swift in Sources */,
+				0120FC871C04FAD200E6460E /* PopularFilmsResponse.swift in Sources */,
 				019F11B51BFF9F7900809FE4 /* Film.swift in Sources */,
 				011374A21BFBBF2C00464FE9 /* BaseRouter.swift in Sources */,
 				019F11A41BFF883600809FE4 /* HTTPClient.swift in Sources */,

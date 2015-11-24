@@ -9,5 +9,5 @@
 import Foundation
 
 protocol Parseable {
-    static func from(dictionary dictionary: Dictionary<String, AnyObject>) -> (object: Self?, error: NSError?)
+    static func from(any: Any) throws -> Self
 }

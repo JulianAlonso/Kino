@@ -14,7 +14,7 @@ class URLMaker {
     
     static func url(endpoint endpoint: String, params: NSDictionary) -> NSURL {
         
-        let url = "\(self.basePath)\(endpoint)&api_key=\(params["api_key"] as! String)"
+        let url = "\(self.basePath)\(endpoint)?api_key=\(params["api_key"] as! String)"
         //TODO: Append params baby 😏
         return NSURL(string: url)!
     }

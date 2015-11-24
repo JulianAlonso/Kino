@@ -8,10 +8,6 @@
 
 import Foundation
 
-protocol Response {
+protocol Response: Parseable {
     
-    var error: NSError? { get set }
-    
-    static func from(any: AnyObject) -> Self
-    static func from(error: NSError) -> Self
 }

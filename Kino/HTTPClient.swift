@@ -14,43 +14,23 @@ protocol HTTPClient {
 
 extension HTTPClient {
     
-    func get<T: Response>(url: NSURL, completion: (T) -> (Void)) {
+    func get<T: Response>(url: NSURL, completion: (inner: () throws -> T) -> (Void)) {
+        
         let session = NSURLSession.sharedSession()
-        DLog("URL: \(url)")
-        session.dataTaskWithURL(url) { (opData, nsurlResponse, opError) -> Void in
-            
-            if let data = opData {
-                let parsed = self.dictionaryFrom(data)
-                if let object = parsed.object {
-                    completion(T.from(object))
-                } else {
-                    completion(T.from(parsed.error!))
+        DLog("Request to url: \(url)")
+        session.dataTaskWithURL(url) { (data, nsurlResponse, opError) -> Void in
+            guard let data = data else { return }
+            do {
+                let object = try NSJSONSerialization.JSONObjectWithData(data, options: []) as AnyObject
+                do {
+                    let response = try T.from(object)
+                    completion(inner: { return response })
+                } catch let error {
+                    completion(inner: { throw error })
                 }
-            } else if let error = opError {
-                completion(T.from(error))
-            } else {
-                completion(T.from(NSError(domain:HTTPClientError.Domain.rawValue, code: HTTPClientErrorCode.General.rawValue, userInfo: [NSLocalizedDescriptionKey : "\(Self.self) ❌ General error"])))
+            } catch let error {
+                completion(inner: { throw error })
             }
         }.resume()
     }
-    
-    func dictionaryFrom(data: NSData) -> (object: AnyObject?, error: NSError?) {
-        do {
-            let dictionary = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers)
-            return (dictionary, nil)
-        } catch let error as NSError {
-            return (nil, error)
-        } catch {
-            return (nil, NSError(domain: HTTPClientError.Domain.rawValue, code: HTTPClientErrorCode.Parsing.rawValue, userInfo: [NSLocalizedDescriptionKey: "\(Self.self) ❌ Parsing error"]))
-        }
-    }
-}
-
-enum HTTPClientError: String {
-    case Domain = "com.HTTPClient.error"
-}
-
-enum HTTPClientErrorCode: Int {
-    case General = -50
-    case Parsing = -49
 }
