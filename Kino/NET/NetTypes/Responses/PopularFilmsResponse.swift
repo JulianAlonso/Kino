@@ -11,9 +11,9 @@ import Foundation
 struct PopularFilmsResponse: Response {
     
     let page: Int
-    let films: [Film]
+    let films: [TMDBFilm]
     
-    init(page: Int, films: [Film]) {
+    init(page: Int, films: [TMDBFilm]) {
         self.page = page
         self.films = films
     }
@@ -22,12 +22,15 @@ struct PopularFilmsResponse: Response {
         
         let dictionary = any as! Dictionary<String, AnyObject>
         
-        let page = dictionary[PopularFilmsResponseFields.Page.rawValue] as! Int
-        var films: [Film] = [Film]()
+        let page = dictionary[PopularFilmsResponseFields.Page] as! Int
+        var films: [TMDBFilm] = [TMDBFilm]()
         
-        for dictionary in dictionary[PopularFilmsResponseFields.Results.rawValue] as! [Dictionary<String, AnyObject>] {
+        for dictionary in dictionary[PopularFilmsResponseFields.Results] as! [Dictionary<String, AnyObject>] {
             do {
-                films.append(try Film.from(dictionary))
+                let film = try TMDBFilm.from(dictionary)
+                if film.isFull() {
+                    films.append(film)
+                }
             } catch let error {
                 DLog(error)
             }
@@ -36,8 +39,8 @@ struct PopularFilmsResponse: Response {
         return self.init(page: page, films: films)
     }
     
-    private enum PopularFilmsResponseFields: String {
-        case Page = "page"
-        case Results = "results"
+    private struct PopularFilmsResponseFields {
+        static let Page = "page"
+        static let Results = "results"
     }
 }

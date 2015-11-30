@@ -11,3 +11,7 @@ import Foundation
 protocol Parseable {
     static func from(any: Any) throws -> Self
 }
+
+enum ParseableError: ErrorType {
+    case NotRecognizedType(String)
+}

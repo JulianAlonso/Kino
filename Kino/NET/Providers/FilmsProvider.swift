@@ -8,12 +8,12 @@
 
 import Foundation
 
-typealias CompletionFilmArray = ([Film] -> Void)
+typealias CompletionFilmArray = ([TMDBFilm] -> Void)
 
 class FilmsProvider: BaseProvider {
     
     convenience init() {
-        self.init(htttpClient: KinoHTTPClient(), endpoint: Config[Endpoints.UpcomingFilmsEndpoint.rawValue] as! String, defaultParams: Config.apiDefaultParams());
+        self.init(htttpClient: KinoHTTPClient(), endpoint: Config[Endpoints.PopularFilmsEndpoint] as! String, defaultParams: Config.apiDefaultParams());
     }
     
     override init(htttpClient client: HTTPClient, endpoint: String, defaultParams: NSDictionary) {

@@ -12,10 +12,10 @@ let Config: ConfigSingleton = ConfigSingleton()
 
 class ConfigSingleton {
     
-    subscript(key: String) -> AnyObject {
+    subscript(key: Any) -> AnyObject {
         get {
-            DLog("Retrieved value: \(Config.valueForKey(key)) for key: \(key)")
-            return Config.valueForKey(key)
+            DLog("Retrieved value: \(Config.valueForKey(String(key))) for key: \(key)")
+            return Config.valueForKey(String(key))
         }
     }
     
@@ -36,7 +36,7 @@ class ConfigSingleton {
     // MARK: - Public
     func apiDefaultParams() -> NSDictionary {
         return [
-            "api_key" : Config[API.ApiKey.rawValue],
+            "api_key" : Config[API.ApiKey],
         ]
     }
     

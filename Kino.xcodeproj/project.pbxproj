@@ -36,6 +36,8 @@
 		01B856D81C03AFEB00504CF0 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01B856D71C03AFEB00504CF0 /* Config.plist */; };
 		01B856DA1C03B2BA00504CF0 /* FilmsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B856D91C03B2BA00504CF0 /* FilmsProvider.swift */; };
 		01B856DD1C03BD0000504CF0 /* URLMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B856DC1C03BD0000504CF0 /* URLMaker.swift */; };
+		01D55AE81C0CEC7A006FA9E5 /* TMDBFilm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D55AE71C0CEC7A006FA9E5 /* TMDBFilm.swift */; };
+		01D55AEB1C0CF0F4006FA9E5 /* MayBeFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D55AEA1C0CF0F4006FA9E5 /* MayBeFull.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,8 @@
 		01B856D71C03AFEB00504CF0 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		01B856D91C03B2BA00504CF0 /* FilmsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmsProvider.swift; sourceTree = "<group>"; };
 		01B856DC1C03BD0000504CF0 /* URLMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLMaker.swift; sourceTree = "<group>"; };
+		01D55AE71C0CEC7A006FA9E5 /* TMDBFilm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TMDBFilm.swift; path = NetEntities/TMDBFilm.swift; sourceTree = "<group>"; };
+		01D55AEA1C0CF0F4006FA9E5 /* MayBeFull.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MayBeFull.swift; path = Protocols/MayBeFull.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 			children = (
 				01B856D51C03AAB800504CF0 /* Config.swift */,
 				01062F7C1BFA684C005E7C46 /* GeneralFunctions.swift */,
+				019F11B11BFF926700809FE4 /* Protocols */,
 			);
 			path = Master;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				019F11A31BFF883600809FE4 /* HTTPClient.swift */,
+				01D55AE91C0CF0DE006FA9E5 /* Protocols */,
 				01B856DB1C03BCEE00504CF0 /* Components */,
 				019F11A51BFF884500809FE4 /* KinoHTTPClient */,
 				019F11A81BFF890700809FE4 /* NetTypes */,
@@ -276,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				019F11A91BFF895C00809FE4 /* Responses */,
+				01D55AE61C0CEC56006FA9E5 /* NetEntities */,
 			);
 			path = NetTypes;
 			sourceTree = "<group>";
@@ -293,7 +300,6 @@
 			isa = PBXGroup;
 			children = (
 				019F11B01BFF926300809FE4 /* Entities */,
-				019F11B11BFF926700809FE4 /* Protocols */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -311,7 +317,8 @@
 			children = (
 				019F11B21BFF926F00809FE4 /* Parseable.swift */,
 			);
-			path = Protocols;
+			name = Protocols;
+			path = ../Domain/Protocols;
 			sourceTree = "<group>";
 		};
 		019F11B81BFFA73C00809FE4 /* Providers */ = {
@@ -329,6 +336,22 @@
 				01B856DC1C03BD0000504CF0 /* URLMaker.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		01D55AE61C0CEC56006FA9E5 /* NetEntities */ = {
+			isa = PBXGroup;
+			children = (
+				01D55AE71C0CEC7A006FA9E5 /* TMDBFilm.swift */,
+			);
+			name = NetEntities;
+			sourceTree = "<group>";
+		};
+		01D55AE91C0CF0DE006FA9E5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				01D55AEA1C0CF0F4006FA9E5 /* MayBeFull.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +438,7 @@
 				01B856DD1C03BD0000504CF0 /* URLMaker.swift in Sources */,
 				019F11B31BFF926F00809FE4 /* Parseable.swift in Sources */,
 				0113749F1BFBBE9200464FE9 /* RoutedNavigationController.swift in Sources */,
+				01D55AEB1C0CF0F4006FA9E5 /* MayBeFull.swift in Sources */,
 				019F11BA1BFFA75700809FE4 /* BaseProvider.swift in Sources */,
 				01062F9D1BFA7B9B005E7C46 /* PresentersDependenciesResolver.swift in Sources */,
 				01062F7D1BFA684C005E7C46 /* GeneralFunctions.swift in Sources */,
@@ -425,6 +449,7 @@
 				01062F891BFA708B005E7C46 /* BillboardRouter.swift in Sources */,
 				01B856D61C03AAB800504CF0 /* Config.swift in Sources */,
 				01062F621BFA6639005E7C46 /* AppDelegate.swift in Sources */,
+				01D55AE81C0CEC7A006FA9E5 /* TMDBFilm.swift in Sources */,
 				01062F791BFA66CE005E7C46 /* CoreDataStack.swift in Sources */,
 				01062F911BFA7227005E7C46 /* BillboardPresenter.swift in Sources */,
 				01062F841BFA6D00005E7C46 /* MainRouter.swift in Sources */,
