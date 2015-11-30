@@ -105,11 +105,11 @@
 			children = (
 				01062F8B1BFA7109005E7C46 /* Testing */,
 				01062F981BFA79D6005E7C46 /* AppDelegate */,
-				01062F991BFA7A50005E7C46 /* DependenciesResolver */,
-				019F11AF1BFF925400809FE4 /* Domain */,
 				01062F7B1BFA6841005E7C46 /* Master */,
-				01062F7F1BFA68ED005E7C46 /* Modules */,
+				01062F991BFA7A50005E7C46 /* DependenciesResolver */,
 				01062F801BFA68F9005E7C46 /* NET */,
+				019F11AF1BFF925400809FE4 /* Domain */,
+				01062F7F1BFA68ED005E7C46 /* Modules */,
 				01062F761BFA668E005E7C46 /* Persistence */,
 				01062F771BFA669C005E7C46 /* Resources */,
 			);
@@ -149,8 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				0113749D1BFBBE6700464FE9 /* Base */,
-				01062F861BFA7070005E7C46 /* Billboard */,
 				01062F811BFA6CF4005E7C46 /* Main */,
+				01062F861BFA7070005E7C46 /* Billboard */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -158,11 +158,11 @@
 		01062F801BFA68F9005E7C46 /* NET */ = {
 			isa = PBXGroup;
 			children = (
+				019F11A31BFF883600809FE4 /* HTTPClient.swift */,
 				01B856DB1C03BCEE00504CF0 /* Components */,
 				019F11A51BFF884500809FE4 /* KinoHTTPClient */,
 				019F11A81BFF890700809FE4 /* NetTypes */,
 				019F11B81BFFA73C00809FE4 /* Providers */,
-				019F11A31BFF883600809FE4 /* HTTPClient.swift */,
 			);
 			path = NET;
 			sourceTree = "<group>";
@@ -283,8 +283,8 @@
 		019F11A91BFF895C00809FE4 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
-				0120FC861C04FAD200E6460E /* PopularFilmsResponse.swift */,
 				019F11AA1BFF896A00809FE4 /* Response.swift */,
+				0120FC861C04FAD200E6460E /* PopularFilmsResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
