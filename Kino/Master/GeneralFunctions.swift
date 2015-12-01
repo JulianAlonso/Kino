@@ -13,3 +13,8 @@ func DLog(message: Any) {
     print(message)
     #endif
 }
+
+// MARK: - Locale functions
+func currentCountryCode() -> String {
+    return NSLocale.currentLocale().objectForKey(NSLocaleCountryCode) as! String
+}

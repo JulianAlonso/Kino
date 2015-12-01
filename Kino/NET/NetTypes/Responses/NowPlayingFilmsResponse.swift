@@ -1,15 +1,15 @@
 //
-//  PopularFilmsResponse.swift
+//  NowPlayingFilmsResponse.swift
 //  Kino
 //
-//  Created by Julian Alonso on 24/11/15.
+//  Created by Julian Alonso on 1/12/15.
 //  Copyright © 2015 Julian. All rights reserved.
 //
 
 import Foundation
 
-struct PopularFilmsResponse: Response {
-
+struct NowPlayingFilmsResponse: Response {
+    
     let page: Int
     let films: [TMDBFilm]
     
@@ -19,16 +19,16 @@ struct PopularFilmsResponse: Response {
     }
     
     // MARK: - Parseable
-    static func from(any: Any) throws -> PopularFilmsResponse {
+    static func from(any: Any) throws -> NowPlayingFilmsResponse {
         
         let dictionary = any as! Dictionary<String, AnyObject>
         
         guard
-            let page = dictionary[PopularFilmsResponseFields.Page] as? Int,
-            let results = dictionary[PopularFilmsResponseFields.Results] as? [Dictionary<String, AnyObject>]
+            let page = dictionary[NowPlayingFilmsResponseFields.Page] as? Int,
+            let results = dictionary[NowPlayingFilmsResponseFields.Results] as? [Dictionary<String, AnyObject>]
         else { throw ParseableError.RequiredFieldsNotFound("❌ Required fields not found at \(dictionary)") }
-    
-        let films = results.flatMap { (value) -> TMDBFilm? in
+        
+        let films = results.flatMap { (value: Dictionary<String, AnyObject>) -> TMDBFilm? in
             do {
                 return try TMDBFilm(dictionary: value)
             } catch let error {
@@ -39,7 +39,7 @@ struct PopularFilmsResponse: Response {
         return self.init(page: page, films: films)
     }
     
-    private struct PopularFilmsResponseFields {
+    private struct NowPlayingFilmsResponseFields {
         static let Page = "page"
         static let Results = "results"
     }

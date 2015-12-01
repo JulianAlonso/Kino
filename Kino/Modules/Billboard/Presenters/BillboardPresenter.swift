@@ -21,7 +21,8 @@ class BillboardPresenter : BasePresenter, BillboardEventHandler {
     }
     
     func updateView() {
-        self.filmsProvider.popularFilms { (films) -> Void in
+        self.filmsProvider.nowPlayingFilms { (films) -> Void in
+            DLog("Film count = \(films.count) ")
             for film in films {
                 DLog("film: \(film)")
             }

@@ -20,8 +20,21 @@ class FilmsProvider: BaseProvider {
         super.init(htttpClient: client, endpoint: endpoint, defaultParams: defaultParams)
     }
     
+    // MARK: - Popular
     func popularFilms(completion: CompletionFilmArray) {
         self.connect(NSDictionary()) { (inner: Void throws -> PopularFilmsResponse) -> Void in
+            do {
+                let response = try inner()
+                completion(response.films)
+            } catch let error {
+                DLog(error)
+            }
+        }
+    }
+    
+    // MARK: - Current
+    func nowPlayingFilms(completion: CompletionFilmArray) {
+        self.connect(NSDictionary()) { (inner: Void throws -> NowPlayingFilmsResponse) -> Void in
             do {
                 let response = try inner()
                 completion(response.films)

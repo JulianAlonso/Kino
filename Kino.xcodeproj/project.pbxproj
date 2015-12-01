@@ -26,6 +26,7 @@
 		011374A81BFBE39200464FE9 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011374A71BFBE39200464FE9 /* BasePresenter.swift */; };
 		0120FC871C04FAD200E6460E /* PopularFilmsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0120FC861C04FAD200E6460E /* PopularFilmsResponse.swift */; };
 		015F89BE1BFF7B62009F7D07 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F89BD1BFF7B62009F7D07 /* BaseViewController.swift */; };
+		0163C3D81C0DB1C30043EF6B /* NowPlayingFilmsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0163C3D71C0DB1C30043EF6B /* NowPlayingFilmsResponse.swift */; };
 		019F11A41BFF883600809FE4 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11A31BFF883600809FE4 /* HTTPClient.swift */; };
 		019F11A71BFF886200809FE4 /* KinoHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11A61BFF886200809FE4 /* KinoHTTPClient.swift */; };
 		019F11AB1BFF896A00809FE4 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11AA1BFF896A00809FE4 /* Response.swift */; };
@@ -63,6 +64,7 @@
 		011374A71BFBE39200464FE9 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		0120FC861C04FAD200E6460E /* PopularFilmsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularFilmsResponse.swift; sourceTree = "<group>"; };
 		015F89BD1BFF7B62009F7D07 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0163C3D71C0DB1C30043EF6B /* NowPlayingFilmsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayingFilmsResponse.swift; sourceTree = "<group>"; };
 		019F11A31BFF883600809FE4 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		019F11A61BFF886200809FE4 /* KinoHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinoHTTPClient.swift; sourceTree = "<group>"; };
 		019F11AA1BFF896A00809FE4 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			children = (
 				019F11AA1BFF896A00809FE4 /* Response.swift */,
 				0120FC861C04FAD200E6460E /* PopularFilmsResponse.swift */,
+				0163C3D71C0DB1C30043EF6B /* NowPlayingFilmsResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				01062F6A1BFA6639005E7C46 /* Kino.xcdatamodeld in Sources */,
 				015F89BE1BFF7B62009F7D07 /* BaseViewController.swift in Sources */,
 				01B856DD1C03BD0000504CF0 /* URLMaker.swift in Sources */,
+				0163C3D81C0DB1C30043EF6B /* NowPlayingFilmsResponse.swift in Sources */,
 				019F11B31BFF926F00809FE4 /* Parseable.swift in Sources */,
 				0113749F1BFBBE9200464FE9 /* RoutedNavigationController.swift in Sources */,
 				01D55AEB1C0CF0F4006FA9E5 /* MayBeFull.swift in Sources */,
