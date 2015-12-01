@@ -22,10 +22,14 @@ struct PopularFilmsResponse: Response {
         
         let dictionary = any as! Dictionary<String, AnyObject>
         
-        let page = dictionary[PopularFilmsResponseFields.Page] as! Int
+        guard
+            let page = dictionary[PopularFilmsResponseFields.Page] as? Int,
+            let results = dictionary[PopularFilmsResponseFields.Results] as? [Dictionary<String, AnyObject>]
+        else { throw ParseableError.RequiredFieldsNotFound("❌ Required fields not found at \(dictionary)") }
+    
         var films: [TMDBFilm] = [TMDBFilm]()
         
-        for dictionary in dictionary[PopularFilmsResponseFields.Results] as! [Dictionary<String, AnyObject>] {
+        for dictionary in results {
             do {
                 let film = try TMDBFilm.from(dictionary)
                 if film.isFull() {

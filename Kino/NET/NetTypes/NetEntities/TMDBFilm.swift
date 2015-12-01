@@ -52,18 +52,24 @@ extension TMDBFilm: Parseable {
     
     static func from(any: Any) throws -> TMDBFilm {
         if let dictionary = any as? Dictionary<String, AnyObject> {
-            return TMDBFilm(dictionary: dictionary)
+            return try TMDBFilm(dictionary: dictionary)
         }
-        
         throw ParseableError.NotRecognizedType("Type \(any.dynamicType) not recognized.")
     }
     
-    init(dictionary: Dictionary<String, AnyObject>) {
+    init(dictionary: Dictionary<String, AnyObject>) throws {
         
-        self.id = String(dictionary[Fields.ID] as! Int)
-        self.title = dictionary[Fields.Title] as! String
-        self.originalLanguage = dictionary[Fields.OriginalLanguage] as! String
-        self.originalTitle = dictionary[Fields.OriginalTitle] as! String
+        guard
+            let id = dictionary[Fields.ID] as? Int,
+            let title = dictionary[Fields.Title] as? String,
+            let originalLanguage = dictionary[Fields.OriginalLanguage] as? String,
+            let originalTitle = dictionary[Fields.OriginalTitle] as? String
+        else { throw ParseableError.RequiredFieldsNotFound("❌ \(dictionary) not has all the required fields. ") }
+        
+        self.id = String(id)
+        self.title = title
+        self.originalLanguage = originalLanguage
+        self.originalTitle = originalTitle
         self.overview = dictionary[Fields.Overview] as? String
         self.posterPath = dictionary[Fields.PosterPath] as? String
         if let runtime = dictionary[Fields.Runtime] as? Int {

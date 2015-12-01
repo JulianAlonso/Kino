@@ -14,4 +14,5 @@ protocol Parseable {
 
 enum ParseableError: ErrorType {
     case NotRecognizedType(String)
+    case RequiredFieldsNotFound(String)
 }
