@@ -11,20 +11,18 @@ import Foundation
 class BaseProvider {
     
     private let client: HTTPClient
-    private let endpoint: String
     private let defaultParams: NSDictionary
     
-    init(htttpClient client: HTTPClient, endpoint: String, defaultParams: NSDictionary) {
+    init(htttpClient client: HTTPClient, defaultParams: NSDictionary) {
         self.client = client
-        self.endpoint = endpoint
         self.defaultParams = defaultParams
     }
     
-    func connect<R: Response>(params: NSDictionary?, completion: (inner: Void throws -> R) -> Void) {
+    func connect<R: Response>(endpoint: String, params: NSDictionary?, completion: (inner: Void throws -> R) -> Void) {
         if let params = params {
             DLog("Received params: \(params)")
         }
-        self.client.get(URLMaker.url(endpoint: self.endpoint, params: self.defaultParams)) { (inner: Void throws -> R) -> (Void) in
+        self.client.get(URLMaker.url(endpoint: endpoint, params: self.defaultParams)) { (inner: Void throws -> R) -> (Void) in
             completion(inner: inner)
         }
     }

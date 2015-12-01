@@ -82,3 +82,31 @@
 //}
 //
 //
+
+struct Object: CustomStringConvertible {
+    let name: String
+    var things: [String]?
+    
+    var description: String {
+        get {
+            return "name: \(self.name) things \(self.things)"
+        }
+    }
+    
+    init (name: String) {
+        self.name = name
+    }
+    
+}
+
+
+var object = Object(name: "hola")
+object.things = ["que", "coño", "pasa"]
+
+let mutated = object
+
+
+
+
+
+

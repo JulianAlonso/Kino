@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NowPlayingFilmsResponse: Response {
+struct NowPlayingFilmsResponse {
     
     let page: Int
     let films: [TMDBFilm]
@@ -18,6 +18,10 @@ struct NowPlayingFilmsResponse: Response {
         self.films = films
     }
     
+}
+
+extension NowPlayingFilmsResponse: Response {
+
     // MARK: - Parseable
     static func from(any: Any) throws -> NowPlayingFilmsResponse {
         
@@ -26,7 +30,7 @@ struct NowPlayingFilmsResponse: Response {
         guard
             let page = dictionary[NowPlayingFilmsResponseFields.Page] as? Int,
             let results = dictionary[NowPlayingFilmsResponseFields.Results] as? [Dictionary<String, AnyObject>]
-        else { throw ParseableError.RequiredFieldsNotFound("❌ Required fields not found at \(dictionary)") }
+            else { throw ParseableError.RequiredFieldsNotFound("❌ Required fields not found at \(dictionary)") }
         
         let films = results.flatMap { (value: Dictionary<String, AnyObject>) -> TMDBFilm? in
             do {
@@ -43,4 +47,5 @@ struct NowPlayingFilmsResponse: Response {
         static let Page = "page"
         static let Results = "results"
     }
+
 }

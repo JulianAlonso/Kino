@@ -19,6 +19,8 @@ struct TMDBFilm {
     let posterPath: String?
     let voteAverage: Double?
     let voteCount: Int?
+    let genres: [TMDBGenre]?
+    var releaseDates: [TMDBFilmRelease]?
     
     func toFilm() throws -> Film {
         if !self.isFull() { throw Error.NotFull }
@@ -44,7 +46,8 @@ extension TMDBFilm: MayBeFull {
         return self.overview != nil &&
             self.posterPath != nil &&
             self.voteAverage != nil &&
-            self.voteCount != nil
+            self.voteCount != nil &&
+            self.genres != nil
     }
 }
 
@@ -80,6 +83,17 @@ extension TMDBFilm: Parseable {
         self.voteAverage = dictionary[Fields.VoteAverage] as? Double
         self.voteCount = dictionary[Fields.VoteCount] as? Int
         
+        if let genres = dictionary[Fields.Genres] as? Array<Dictionary<String, AnyObject>> {
+            self.genres = genres.flatMap({ (dictionary) -> TMDBGenre? in
+                do {
+                    return try TMDBGenre(dictionary: dictionary)
+                } catch {
+                    return nil
+                }
+            })
+        } else {
+            self.genres = nil
+        }
     }
     
     // MARK: - Film Fields
@@ -94,6 +108,7 @@ extension TMDBFilm: Parseable {
         static let Runtime = "runtime"
         static let VoteAverage = "vote_average"
         static let VoteCount = "vote_count"
+        static let Genres = "genres"
     }
 }
 

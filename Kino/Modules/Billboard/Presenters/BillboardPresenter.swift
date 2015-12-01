@@ -11,7 +11,7 @@ import UIKit
 class BillboardPresenter : BasePresenter, BillboardEventHandler {
     
     let billboardViewController: BillboardViewController
-    let filmsProvider = FilmsProvider()
+    let filmsProvider = NowPlayingFilmProvider()
     
     
     weak var billboardRouter: BillboardRouter?
