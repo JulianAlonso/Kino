@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Film {
+struct Film: DomainObject {
     
     let id: String
     let title: String

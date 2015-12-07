@@ -1,42 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
-    <entity name="Film" representedClassName="Film" syncable="YES">
-        <attribute name="filmBackdropPath" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="filmHomepage" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="filmId" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="filmOriginalTitle" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="filmOverview" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="filmPosterPath" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="filmReleaseDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="filmRuntime" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="filmTagline" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="filmTitle" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="filmType" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="filmVoteAverage" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="filmVotes" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="filmGenres" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Genre" inverseName="genreFilms" inverseEntity="Genre" syncable="YES"/>
-        <relationship name="filmLists" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="List" inverseName="listFilms" inverseEntity="List" syncable="YES"/>
-        <relationship name="filmReleases" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FilmRelease" inverseName="releaseFilm" inverseEntity="FilmRelease" syncable="YES"/>
-    </entity>
-    <entity name="FilmRelease" representedClassName="FilmRelease" syncable="YES">
-        <attribute name="releaseCertification" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="releaseCountryISO" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="FilmMO" representedClassName=".FilmMO" parentEntity="KinoMO" syncable="YES">
+        <attribute name="backdropPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="homepage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="originalTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="overview" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="posterPath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="releaseDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="releaseFilm" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Film" inverseName="filmReleases" inverseEntity="Film" syncable="YES"/>
+        <attribute name="runtime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tagline" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="voteAverage" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="votes" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="filmGenres" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="GenreMO" inverseName="genreFilms" inverseEntity="GenreMO" syncable="YES"/>
+        <relationship name="filmLists" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ListMO" inverseName="listFilms" inverseEntity="ListMO" syncable="YES"/>
+        <relationship name="filmReleases" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FilmReleaseMO" inverseName="releaseFilm" inverseEntity="FilmReleaseMO" syncable="YES"/>
     </entity>
-    <entity name="Genre" representedClassName="Genre" syncable="YES">
-        <attribute name="genreId" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="genreName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="genreFilms" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Film" inverseName="filmGenres" inverseEntity="Film" syncable="YES"/>
+    <entity name="FilmReleaseMO" representedClassName=".FilmReleaseMO" parentEntity="KinoMO" syncable="YES">
+        <attribute name="certification" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="countryISO" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="releaseDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="releaseFilm" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FilmMO" inverseName="filmReleases" inverseEntity="FilmMO" syncable="YES"/>
     </entity>
-    <entity name="List" representedClassName="List" syncable="YES">
-        <attribute name="listName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="listFilms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Film" inverseName="filmLists" inverseEntity="Film" syncable="YES"/>
+    <entity name="GenreMO" representedClassName=".GenreMO" parentEntity="KinoMO" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="genreFilms" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="FilmMO" inverseName="filmGenres" inverseEntity="FilmMO" syncable="YES"/>
+    </entity>
+    <entity name="KinoMO" representedClassName=".KinoMO" isAbstract="YES" syncable="YES">
+        <attribute name="id" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ListMO" representedClassName=".ListMO" parentEntity="KinoMO" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="listFilms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FilmMO" inverseName="filmLists" inverseEntity="FilmMO" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Film" positionX="-63" positionY="-18" width="128" height="285"/>
-        <element name="FilmRelease" positionX="189" positionY="90" width="128" height="105"/>
-        <element name="Genre" positionX="117" positionY="54" width="128" height="88"/>
-        <element name="List" positionX="439" positionY="116" width="128" height="73"/>
+        <element name="FilmMO" positionX="-63" positionY="-18" width="128" height="270"/>
+        <element name="FilmReleaseMO" positionX="189" positionY="90" width="128" height="105"/>
+        <element name="GenreMO" positionX="117" positionY="54" width="128" height="75"/>
+        <element name="ListMO" positionX="439" positionY="116" width="128" height="75"/>
+        <element name="KinoMO" positionX="144" positionY="108" width="128" height="60"/>
     </elements>
 </model>

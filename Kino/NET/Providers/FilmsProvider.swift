@@ -1,19 +1,44 @@
 //
-//  CompleteFilmProvider.swift
+//  FilmsProvider.swift
 //  Kino
 //
-//  Created by Julian Alonso on 1/12/15.
+//  Created by Julian Alonso on 23/11/15.
 //  Copyright © 2015 Julian. All rights reserved.
 //
 
 import Foundation
 
-class CompleteFilmProvider: BaseProvider {
+class FilmsProvider: BaseProvider {
     
     convenience init() {
         self.init(htttpClient: KinoHTTPClient(), defaultParams: Config.apiDefaultParams());
     }
     
+    // MARK: - Popular Films Methods
+    func popularFilms(completion: FilmArrayCompletion) {
+        self.connect(Config[Endpoints.PopularFilmsEndpoint] as! String, params: NSDictionary()) { (inner: Void throws -> PopularFilmsResponse) -> Void in
+            do {
+                let response = try inner()
+                completion(response.films)
+            } catch let error {
+                DLog(error)
+            }
+        }
+    }
+    
+    // MARK: - Paying Now Film Methods
+    func nowPlayingFilms(completion: FilmArrayCompletion) {
+        self.connect(Config[Endpoints.NowPlayingFilmsEndpoint] as! String, params: NSDictionary()) { (inner: Void throws -> NowPlayingFilmsResponse) -> Void in
+            do {
+                let response = try inner()
+                completion(response.films)
+            } catch let error {
+                DLog(error)
+            }
+        }
+    }
+    
+    // MARK: - Complete Film Methods
     func completeFilms(films: Array<TMDBFilm>, completion: FilmArrayCompletion) {
         var completedFilms = [TMDBFilm]()
         for film in films {
