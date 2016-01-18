@@ -11,7 +11,7 @@
 		01062F6A1BFA6639005E7C46 /* Kino.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01062F681BFA6639005E7C46 /* Kino.xcdatamodeld */; };
 		01062F6C1BFA6639005E7C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01062F6B1BFA6639005E7C46 /* Assets.xcassets */; };
 		01062F6F1BFA6639005E7C46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01062F6D1BFA6639005E7C46 /* LaunchScreen.storyboard */; };
-		01062F791BFA66CE005E7C46 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01062F781BFA66CD005E7C46 /* CoreDataStack.swift */; };
+		01062F791BFA66CE005E7C46 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01062F781BFA66CD005E7C46 /* CoreDataManager.swift */; };
 		01062F7D1BFA684C005E7C46 /* GeneralFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01062F7C1BFA684C005E7C46 /* GeneralFunctions.swift */; };
 		01062F841BFA6D00005E7C46 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01062F831BFA6D00005E7C46 /* MainRouter.swift */; };
 		01062F891BFA708B005E7C46 /* BillboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01062F881BFA708B005E7C46 /* BillboardRouter.swift */; };
@@ -68,7 +68,7 @@
 		01062F6B1BFA6639005E7C46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01062F6E1BFA6639005E7C46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01062F701BFA6639005E7C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01062F781BFA66CD005E7C46 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		01062F781BFA66CD005E7C46 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		01062F7C1BFA684C005E7C46 /* GeneralFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralFunctions.swift; sourceTree = "<group>"; };
 		01062F831BFA6D00005E7C46 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		01062F881BFA708B005E7C46 /* BillboardRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillboardRouter.swift; sourceTree = "<group>"; };
@@ -167,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				01CB674F1C159DB600FAC36F /* Repositories */,
-				013F86271C0E2AC800070167 /* MOs */,
 				01CB674E1C159D8F00FAC36F /* CoreDataStack */,
 				01062F681BFA6639005E7C46 /* Kino.xcdatamodeld */,
 			);
@@ -334,6 +333,15 @@
 			name = Types;
 			sourceTree = "<group>";
 		};
+		0157F4B21C4D78F800C2ABBC /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				01CB67531C15A0D800FAC36F /* CoreDataRepository.swift */,
+				01CB67861C15E32A00FAC36F /* FilmRepository.swift */,
+			);
+			name = Repositories;
+			sourceTree = "<group>";
+		};
 		019C485F1C15ECFB000FC8AF /* DataManagers */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,7 +431,7 @@
 		01CB674E1C159D8F00FAC36F /* CoreDataStack */ = {
 			isa = PBXGroup;
 			children = (
-				01062F781BFA66CD005E7C46 /* CoreDataStack.swift */,
+				01062F781BFA66CD005E7C46 /* CoreDataManager.swift */,
 			);
 			name = CoreDataStack;
 			sourceTree = "<group>";
@@ -441,8 +449,8 @@
 		01CB67521C15A0C400FAC36F /* CoreDataImplementation */ = {
 			isa = PBXGroup;
 			children = (
-				01CB67531C15A0D800FAC36F /* CoreDataRepository.swift */,
-				01CB67861C15E32A00FAC36F /* FilmRepository.swift */,
+				013F86271C0E2AC800070167 /* MOs */,
+				0157F4B21C4D78F800C2ABBC /* Repositories */,
 			);
 			name = CoreDataImplementation;
 			sourceTree = "<group>";
@@ -589,7 +597,7 @@
 				01CB67771C15B28E00FAC36F /* KinoMO+CoreDataProperties.swift in Sources */,
 				01D55AE81C0CEC7A006FA9E5 /* TMDBFilm.swift in Sources */,
 				01CB67791C15B28E00FAC36F /* FilmMO+CoreDataProperties.swift in Sources */,
-				01062F791BFA66CE005E7C46 /* CoreDataStack.swift in Sources */,
+				01062F791BFA66CE005E7C46 /* CoreDataManager.swift in Sources */,
 				01062F911BFA7227005E7C46 /* BillboardPresenter.swift in Sources */,
 				013F86431C0E390700070167 /* FilmResponse.swift in Sources */,
 				01CB677C1C15CCB300FAC36F /* DomainObject.swift in Sources */,
