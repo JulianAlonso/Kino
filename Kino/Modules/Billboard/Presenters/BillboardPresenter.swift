@@ -11,22 +11,18 @@ import UIKit
 class BillboardPresenter : BasePresenter, BillboardEventHandler {
     
     let billboardViewController: BillboardViewController
-    let filmsProvider = NowPlayingFilmProvider()
+    let filmDataManager: FilmDataManager
     
     
     weak var billboardRouter: BillboardRouter?
     
     init(_ billboardViewController: BillboardViewController) {
         self.billboardViewController = billboardViewController
+        self.filmDataManager = FilmDataManager()
     }
     
     func updateView() {
-        self.filmsProvider.nowPlayingFilms { (films) -> Void in
-            DLog("Film count = \(films.count) ")
-            for film in films {
-                DLog("film: \(film)")
-            }
-        }
+        self.filmDataManager.updateNowPlayingFilms()
     }
     
 }

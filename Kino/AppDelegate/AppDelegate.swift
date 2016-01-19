@@ -14,10 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    lazy var coreDataStack : CoreDataStack = {
-        return CoreDataStack()
-    }()
-    
     lazy var mainRouter: MainRouter = {
         return MainRouter()
     }()
@@ -26,14 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
         self.mainRouter.showMainViewInWindow(self.window!)
         return true
-    }
-
-    func applicationWillTerminate(application: UIApplication) {
-        do {
-            try self.coreDataStack.managedObjectContext.save()
-        } catch {
-            
-        }
     }
 
 }

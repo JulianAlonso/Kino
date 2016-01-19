@@ -16,6 +16,6 @@ protocol CoreDataBuilder: PersistenceObject {
 
 extension CoreDataBuilder {
     static func new(managedOjectContext: NSManagedObjectContext) -> Self {
-        return NSEntityDescription.insertNewObjectForEntityForName("\(RelationshipObjectType.self)", inManagedObjectContext: managedOjectContext) as! Self
+        return NSEntityDescription.insertNewObjectForEntityForName("\(self)", inManagedObjectContext: managedOjectContext) as! Self
     }
 }

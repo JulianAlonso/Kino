@@ -32,19 +32,25 @@ extension CoreDataRepository where DataType: KinoMO, DataType: CoreDataBuilder {
         
         var count = 0
         for object in objects {
+            DLog("Creating or updating object: \(object)")
             self.createOrUpdateObject(object, save: false, completion: { (inner: () throws -> DataType) -> Void in
                 do {
                     updatedObjects.append(try inner())
+                    DLog("Appendend updated object \(updatedObjects.last)")
                 } catch {
                     DLog("Error on create or update objets: \(error)")
                 }
                 count++
                 if count == objects.count {
+                    DLog("Objects are updated")
                     self.writeManagedObjectContext.performBlock({ () -> Void in
                         do {
+                            DLog("Trying write")
                             try self.writeManagedObjectContext.save()
+                            DLog("Returning updated objects")
                             completion(inner: { return updatedObjects })
                         } catch {
+                            DLog("Failed with error: \(error)")
                             completion(inner: { throw error })
                         }
                     })
@@ -87,16 +93,22 @@ extension CoreDataRepository where DataType: KinoMO, DataType: CoreDataBuilder {
                     var foundObject = try inner()
                     
                     if foundObject != nil {
+                        DLog("Found object: \(foundObject)")
                         foundObject?.merge(object)
                     } else {
+                        DLog("Creating object")
                         foundObject = DataType.create(object, managedObjectContext: self.writeManagedObjectContext)
+                        DLog("Created object: \(foundObject)")
                     }
                     
                     if save {
                         try self.writeManagedObjectContext.save()
+                        DLog("Saved object: \(object)")
                     }
+                    completion(inner: {return foundObject!})
                 } catch {
                     DLog(error)
+                    completion(inner: {throw error})
                 }
             }
         }

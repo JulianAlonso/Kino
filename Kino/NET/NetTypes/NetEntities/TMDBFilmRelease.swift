@@ -32,7 +32,7 @@ extension TMDBFilmRelease: Parseable {
     }
     
     init(dictionary: Dictionary<String, AnyObject>) throws {
-        
+        DLog(dictionary)
         guard
             let certification = dictionary[Fields.Ceritification] as? String,
             let countryISO = dictionary[Fields.CountryISO] as? String,

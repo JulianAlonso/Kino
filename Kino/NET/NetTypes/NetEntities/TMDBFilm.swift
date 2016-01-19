@@ -51,6 +51,12 @@ extension TMDBFilm: MayBeFull {
     }
 }
 
+extension TMDBFilm: Equatable {}
+
+func ==(lhs: TMDBFilm, rhs: TMDBFilm) -> Bool {
+    return lhs.id == rhs.id
+}
+
 extension TMDBFilm: Parseable {
     
     static func from(any: Any) throws -> TMDBFilm {
@@ -67,7 +73,7 @@ extension TMDBFilm: Parseable {
             let title = dictionary[Fields.Title] as? String,
             let originalLanguage = dictionary[Fields.OriginalLanguage] as? String,
             let originalTitle = dictionary[Fields.OriginalTitle] as? String
-        else { throw ParseableError.RequiredFieldsNotFound("❌ \(dictionary) not has all the required fields. ") }
+        else { throw ParseableError.RequiredFieldsNotFound("❌ Film with name \(dictionary[Fields.Title]) not has all the required fields. ") }
         
         self.id = String(id)
         self.title = title

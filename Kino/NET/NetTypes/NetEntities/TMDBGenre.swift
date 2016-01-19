@@ -29,7 +29,7 @@ extension TMDBGenre: Parseable {
     }
     
     init(dictionary: Dictionary<String, AnyObject>) throws {
-        
+
         guard
             let id = dictionary[Fields.ID] as? Int,
             let name = dictionary[Fields.Name] as? String
