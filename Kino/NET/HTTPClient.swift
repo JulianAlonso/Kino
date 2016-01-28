@@ -17,7 +17,7 @@ extension HTTPClient {
     func get<T: Response>(url: NSURL, completion: (inner: () throws -> T) -> (Void)) {
         
         let session = NSURLSession.sharedSession()
-        DLog("Request to url: \(url)")
+        DLog("Request to url: \(url) \n With response type = \(T.self)")
         session.dataTaskWithURL(url) { (data, nsurlResponse, opError) -> Void in
             guard let data = data else { return }
             do {

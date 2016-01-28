@@ -23,13 +23,21 @@ final class FilmMO: KinoMO, CoreDataBuilder {
         
         filmMO.id = object.id
         filmMO.title = object.title
+        filmMO.originalTitle = object.originalTitle
+        //backdrop not done 😅
+        //homepage not done
+        filmMO.overview = object.overview
+        filmMO.posterPath = object.posterPath
+        filmMO.filmReleases = object.releaseDates.map({ (filmRelease: TMDBFilmRelease) -> FilmRelease in
+            return 
+        })
         
         
         return filmMO
     }
     
     func merge(object: RelationshipObjectType) {
-        
+        DLog("Merging object.");
     }
 
 }

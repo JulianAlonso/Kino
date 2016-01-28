@@ -46,6 +46,6 @@ extension FilmReleasesResponse: Response {
     }
 
     private struct Fields {
-        static let Releases = "Countries"
+        static let Releases = "countries"
     }
 }
