@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01026F3E1C5FE97D00500992 /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01026F3C1C5FE97D00500992 /* FilmTableViewCell.swift */; };
+		01026F3F1C5FE97D00500992 /* FilmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01026F3D1C5FE97D00500992 /* FilmTableViewCell.xib */; };
 		01062F621BFA6639005E7C46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01062F611BFA6639005E7C46 /* AppDelegate.swift */; };
 		01062F6A1BFA6639005E7C46 /* Kino.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01062F681BFA6639005E7C46 /* Kino.xcdatamodeld */; };
 		01062F6C1BFA6639005E7C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01062F6B1BFA6639005E7C46 /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01026F3C1C5FE97D00500992 /* FilmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
+		01026F3D1C5FE97D00500992 /* FilmTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilmTableViewCell.xib; sourceTree = "<group>"; };
 		01062F5E1BFA6639005E7C46 /* Kino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01062F611BFA6639005E7C46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01062F691BFA6639005E7C46 /* Kino.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kino.xcdatamodel; sourceTree = "<group>"; };
@@ -130,6 +134,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01026F391C5FE95A00500992 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				01026F3A1C5FE96600500992 /* TableViewCells */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		01026F3A1C5FE96600500992 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				01026F3C1C5FE97D00500992 /* FilmTableViewCell.swift */,
+				01026F3D1C5FE97D00500992 /* FilmTableViewCell.xib */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
 		01062F551BFA6639005E7C46 = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +218,7 @@
 		01062F7F1BFA68ED005E7C46 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				01026F391C5FE95A00500992 /* Common */,
 				0113749D1BFBBE6700464FE9 /* Base */,
 				01062F811BFA6CF4005E7C46 /* Main */,
 				01062F861BFA7070005E7C46 /* Billboard */,
@@ -541,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01B856D81C03AFEB00504CF0 /* Config.plist in Resources */,
+				01026F3F1C5FE97D00500992 /* FilmTableViewCell.xib in Resources */,
 				01062F6F1BFA6639005E7C46 /* LaunchScreen.storyboard in Resources */,
 				01062F6C1BFA6639005E7C46 /* Assets.xcassets in Resources */,
 				01062F971BFA72CB005E7C46 /* BillboardViewController.xib in Resources */,
@@ -601,6 +624,7 @@
 				01062F911BFA7227005E7C46 /* BillboardPresenter.swift in Sources */,
 				013F86431C0E390700070167 /* FilmResponse.swift in Sources */,
 				01CB677C1C15CCB300FAC36F /* DomainObject.swift in Sources */,
+				01026F3E1C5FE97D00500992 /* FilmTableViewCell.swift in Sources */,
 				01062F841BFA6D00005E7C46 /* MainRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,9 +28,9 @@ final class FilmMO: KinoMO, CoreDataBuilder {
         //homepage not done
         filmMO.overview = object.overview
         filmMO.posterPath = object.posterPath
-        filmMO.filmReleases = object.releaseDates.map({ (filmRelease: TMDBFilmRelease) -> FilmRelease in
-            return 
-        })
+//        filmMO.filmReleases = object.releaseDates.map({ (filmRelease: TMDBFilmRelease) -> FilmRelease in
+//            return 
+//        })
         
         
         return filmMO
