@@ -59,6 +59,7 @@
 		01CB677F1C15CD8B00FAC36F /* CoreDataBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB677E1C15CD8B00FAC36F /* CoreDataBuilder.swift */; };
 		01CB67821C15D90B00FAC36F /* PersistenceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB67811C15D90B00FAC36F /* PersistenceObject.swift */; };
 		01CB67871C15E32A00FAC36F /* FilmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB67861C15E32A00FAC36F /* FilmRepository.swift */; };
+		01D016091C862CC900D44512 /* MainRouterResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D016081C862CC900D44512 /* MainRouterResolver.swift */; };
 		01D55AE81C0CEC7A006FA9E5 /* TMDBFilm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D55AE71C0CEC7A006FA9E5 /* TMDBFilm.swift */; };
 		01D55AEB1C0CF0F4006FA9E5 /* MayBeFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D55AEA1C0CF0F4006FA9E5 /* MayBeFull.swift */; };
 		D66B230289271C5E9AB2E005 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083710A1500A958A218E31AC /* Pods.framework */; };
@@ -120,6 +121,7 @@
 		01CB677E1C15CD8B00FAC36F /* CoreDataBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataBuilder.swift; path = MOs/Protocols/CoreDataBuilder.swift; sourceTree = "<group>"; };
 		01CB67811C15D90B00FAC36F /* PersistenceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceObject.swift; sourceTree = "<group>"; };
 		01CB67861C15E32A00FAC36F /* FilmRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmRepository.swift; sourceTree = "<group>"; };
+		01D016081C862CC900D44512 /* MainRouterResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainRouterResolver.swift; path = Resolvers/RouterResolvers/MainRouterResolver.swift; sourceTree = "<group>"; };
 		01D55AE71C0CEC7A006FA9E5 /* TMDBFilm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TMDBFilm.swift; path = NetEntities/TMDBFilm.swift; sourceTree = "<group>"; };
 		01D55AEA1C0CF0F4006FA9E5 /* MayBeFull.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MayBeFull.swift; path = Protocols/MayBeFull.swift; sourceTree = "<group>"; };
 		083710A1500A958A218E31AC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +181,7 @@
 			children = (
 				01062F8B1BFA7109005E7C46 /* Testing */,
 				01062F981BFA79D6005E7C46 /* AppDelegate */,
+				01D015FD1C862C0300D44512 /* Resolvers */,
 				01062F7B1BFA6841005E7C46 /* Master */,
 				01062F991BFA7A50005E7C46 /* DependenciesResolver */,
 				01062F801BFA68F9005E7C46 /* NET */,
@@ -492,6 +495,22 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
+		01D015FD1C862C0300D44512 /* Resolvers */ = {
+			isa = PBXGroup;
+			children = (
+				01D016071C862CA100D44512 /* RouterResolvers */,
+			);
+			name = Resolvers;
+			sourceTree = "<group>";
+		};
+		01D016071C862CA100D44512 /* RouterResolvers */ = {
+			isa = PBXGroup;
+			children = (
+				01D016081C862CC900D44512 /* MainRouterResolver.swift */,
+			);
+			name = RouterResolvers;
+			sourceTree = "<group>";
+		};
 		01D55AE61C0CEC56006FA9E5 /* NetEntities */ = {
 			isa = PBXGroup;
 			children = (
@@ -679,6 +698,7 @@
 				01D55AEB1C0CF0F4006FA9E5 /* MayBeFull.swift in Sources */,
 				019F11BA1BFFA75700809FE4 /* BaseProvider.swift in Sources */,
 				01CB677A1C15B28E00FAC36F /* FilmMO.swift in Sources */,
+				01D016091C862CC900D44512 /* MainRouterResolver.swift in Sources */,
 				01CB676C1C15AFCF00FAC36F /* Genre.swift in Sources */,
 				01062F9D1BFA7B9B005E7C46 /* PresentersDependenciesResolver.swift in Sources */,
 				01062F7D1BFA684C005E7C46 /* GeneralFunctions.swift in Sources */,
@@ -806,7 +826,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Kino/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Julian.Kino;
@@ -820,7 +840,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Kino/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Julian.Kino;
 				PRODUCT_NAME = "$(TARGET_NAME)";

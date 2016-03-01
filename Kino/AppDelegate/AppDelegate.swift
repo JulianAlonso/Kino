@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Jalver
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     lazy var mainRouter: MainRouter = {
-        return MainRouter()
+        return Jalver.resolve(MainRouter)
     }()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

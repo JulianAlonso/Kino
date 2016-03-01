@@ -8,14 +8,8 @@
 
 import UIKit
 
-class MainRouter {
+final class MainRouter {
     
-//    let routersDR: RoutersDependenciesResolver
-//    
-//    init(_ routersDR: RoutersDependenciesResolver) {
-//        self.routersDR = routersDR
-//    }
-//    
     func showMainViewInWindow(window: UIWindow) {
         
         let tabbar = UITabBarController()
