@@ -1,0 +1,5 @@
+#Jalver - To resolve dependencies:
+git "https://github.com/JulianAlonso/Jalver" "develop"
+
+#Janet - Networking framework to work with NSOperations
+git "https://github.com/JulianAlonso/Janet" "develop"
