@@ -7,12 +7,12 @@
 //
 
 import Foundation
-import Jalver
-
-extension MainRouter: Resolver {
-    
-    static func resolve() -> MainRouter {
-        return MainRouter()
-    }
-    
-}
+//import Jalver
+//
+//extension MainRouter: Resolver {
+//    
+//    static func resolve() -> MainRouter {
+//        return MainRouter()
+//    }
+//    
+//}
