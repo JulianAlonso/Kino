@@ -26,6 +26,8 @@
 		0113749F1BFBBE9200464FE9 /* RoutedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0113749E1BFBBE9200464FE9 /* RoutedNavigationController.swift */; };
 		011374A21BFBBF2C00464FE9 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011374A11BFBBF2C00464FE9 /* BaseRouter.swift */; };
 		011374A81BFBE39200464FE9 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011374A71BFBE39200464FE9 /* BasePresenter.swift */; };
+		011534EC1C8F68300004ED02 /* Janet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011534EB1C8F68300004ED02 /* Janet.framework */; };
+		011534EE1C8F68770004ED02 /* Jalver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011534ED1C8F68770004ED02 /* Jalver.framework */; };
 		0120FC871C04FAD200E6460E /* PopularFilmsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0120FC861C04FAD200E6460E /* PopularFilmsResponse.swift */; };
 		013F86391C0E2CFE00070167 /* TMDBGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F86381C0E2CFE00070167 /* TMDBGenre.swift */; };
 		013F86411C0E343200070167 /* TMDBProviderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F86401C0E343200070167 /* TMDBProviderTypes.swift */; };
@@ -87,6 +89,8 @@
 		0113749E1BFBBE9200464FE9 /* RoutedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutedNavigationController.swift; sourceTree = "<group>"; };
 		011374A11BFBBF2C00464FE9 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		011374A71BFBE39200464FE9 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		011534EB1C8F68300004ED02 /* Janet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Janet.framework; path = Carthage/Build/iOS/Janet.framework; sourceTree = "<group>"; };
+		011534ED1C8F68770004ED02 /* Jalver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Jalver.framework; path = Carthage/Build/Mac/Jalver.framework; sourceTree = "<group>"; };
 		0120FC861C04FAD200E6460E /* PopularFilmsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularFilmsResponse.swift; sourceTree = "<group>"; };
 		013F86381C0E2CFE00070167 /* TMDBGenre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TMDBGenre.swift; path = NetEntities/TMDBGenre.swift; sourceTree = "<group>"; };
 		013F86401C0E343200070167 /* TMDBProviderTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDBProviderTypes.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				011534EE1C8F68770004ED02 /* Jalver.framework in Frameworks */,
+				011534EC1C8F68300004ED02 /* Janet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +533,8 @@
 		CC8F1D9C3902E0C4F85F2BA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				011534ED1C8F68770004ED02 /* Jalver.framework */,
+				011534EB1C8F68300004ED02 /* Janet.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -757,6 +765,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Kino/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -770,6 +783,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Kino/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

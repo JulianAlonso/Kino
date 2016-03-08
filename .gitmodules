@@ -1,6 +1,0 @@
-[submodule "Carthage/Checkouts/Jalver"]
-	path = Carthage/Checkouts/Jalver
-	url = https://github.com/JulianAlonso/Jalver
-[submodule "Carthage/Checkouts/Janet"]
-	path = Carthage/Checkouts/Janet
-	url = https://github.com/JulianAlonso/Janet
