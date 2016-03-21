@@ -8,13 +8,10 @@
 
 import Foundation
 
-class FilmDataManager: BaseDataManager<FilmsProvider, FilmRepository> {
+final class FilmDataManager: BaseDataManager<FilmsProvider, FilmRepository> {
     
-    init() {
-        let filmProvider = FilmsProvider()
-        let filmRepository = FilmRepository(mainMOC: CoreDataManager.sharedInstance.readMOC!, backgroundMOC: CoreDataManager.sharedInstance.writerMOC!)
-        
-        super.init(provider: filmProvider, repository: filmRepository)
+    override init(provider: FilmsProvider, repository: FilmRepository) {
+        super.init(provider: provider, repository: repository)
     }
     
     func updateNowPlayingFilms() {

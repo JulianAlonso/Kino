@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Jalver
 
 final class MainRouter {
     
@@ -14,10 +15,7 @@ final class MainRouter {
         
         let tabbar = UITabBarController()
         
-        let billboardViewController = BillboardViewController()
-        let billboardPresenter = BillboardPresenter(billboardViewController)
-        
-        let billboardRouter = BillboardRouter(viewController: billboardViewController, presenter: billboardPresenter)
+        let billboardRouter = Jalver.resolve(BillboardRouter)
         
         let routedNavigationController = RoutedNavigationController(router: billboardRouter)
         

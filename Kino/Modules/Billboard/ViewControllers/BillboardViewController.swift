@@ -16,7 +16,7 @@ protocol BillboardEventHandler {
 }
 
 
-class BillboardViewController: BaseViewController, NSFetchedResultsControllerDelegate, UITableViewDataSource {
+final class BillboardViewController: BaseViewController, NSFetchedResultsControllerDelegate, UITableViewDataSource {
     
     var eventHandler: BillboardEventHandler?
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BillboardPresenter : BasePresenter, BillboardEventHandler {
+final class BillboardPresenter : BasePresenter, BillboardEventHandler {
     
     let billboardViewController: BillboardViewController
     let filmDataManager: FilmDataManager
@@ -16,9 +16,9 @@ class BillboardPresenter : BasePresenter, BillboardEventHandler {
     
     weak var billboardRouter: BillboardRouter?
     
-    init(_ billboardViewController: BillboardViewController) {
+    init(_ billboardViewController: BillboardViewController, filmDataManager: FilmDataManager) {
         self.billboardViewController = billboardViewController
-        self.filmDataManager = FilmDataManager()
+        self.filmDataManager = filmDataManager
     }
     
     func updateView() {

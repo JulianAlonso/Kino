@@ -13,7 +13,7 @@ class BaseProvider {
     private let client: HTTPClient
     private let defaultParams: NSDictionary
     
-    init(htttpClient client: HTTPClient, defaultParams: NSDictionary) {
+    init(httpClient client: HTTPClient, defaultParams: NSDictionary) {
         self.client = client
         self.defaultParams = defaultParams
     }

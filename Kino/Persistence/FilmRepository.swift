@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class FilmRepository: CoreDataRepository {
+final class FilmRepository: CoreDataRepository {
     typealias DataType = FilmMO
     
     let managedObjectContext: NSManagedObjectContext

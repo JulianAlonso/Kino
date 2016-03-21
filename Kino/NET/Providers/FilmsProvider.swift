@@ -10,10 +10,6 @@ import Foundation
 
 class FilmsProvider: BaseProvider {
     
-    convenience init() {
-        self.init(htttpClient: KinoHTTPClient(), defaultParams: Config.apiDefaultParams());
-    }
-    
     // MARK: - Popular Films Methods
     func popularFilms(completion: FilmArrayCompletion) {
         self.connect(Config[Endpoints.PopularFilmsEndpoint] as! String, params: NSDictionary()) { (inner: Void throws -> PopularFilmsResponse) -> Void in

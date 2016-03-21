@@ -48,6 +48,11 @@
 		01B856D81C03AFEB00504CF0 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01B856D71C03AFEB00504CF0 /* Config.plist */; };
 		01B856DA1C03B2BA00504CF0 /* FilmsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B856D91C03B2BA00504CF0 /* FilmsProvider.swift */; };
 		01B856DD1C03BD0000504CF0 /* URLMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B856DC1C03BD0000504CF0 /* URLMaker.swift */; };
+		01C9E2F31CA08D0300A2DEA5 /* ViewControllerResolvers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9E2F21CA08D0300A2DEA5 /* ViewControllerResolvers.swift */; };
+		01C9E2F51CA08D8900A2DEA5 /* PresenterResolvers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9E2F41CA08D8900A2DEA5 /* PresenterResolvers.swift */; };
+		01C9E2F81CA08E7500A2DEA5 /* DataManagerResolvers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9E2F71CA08E7500A2DEA5 /* DataManagerResolvers.swift */; };
+		01C9E2FB1CA08F7000A2DEA5 /* ProviderResolvers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9E2FA1CA08F7000A2DEA5 /* ProviderResolvers.swift */; };
+		01C9E2FE1CA0928F00A2DEA5 /* RepositoryResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9E2FD1CA0928F00A2DEA5 /* RepositoryResolver.swift */; };
 		01CB67511C159E5A00FAC36F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB67501C159E5A00FAC36F /* Repository.swift */; };
 		01CB67541C15A0D800FAC36F /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB67531C15A0D800FAC36F /* CoreDataRepository.swift */; };
 		01CB676A1C15AFC000FAC36F /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB67691C15AFC000FAC36F /* List.swift */; };
@@ -61,7 +66,7 @@
 		01CB677F1C15CD8B00FAC36F /* CoreDataBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB677E1C15CD8B00FAC36F /* CoreDataBuilder.swift */; };
 		01CB67821C15D90B00FAC36F /* PersistenceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB67811C15D90B00FAC36F /* PersistenceObject.swift */; };
 		01CB67871C15E32A00FAC36F /* FilmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB67861C15E32A00FAC36F /* FilmRepository.swift */; };
-		01D016091C862CC900D44512 /* MainRouterResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D016081C862CC900D44512 /* MainRouterResolver.swift */; };
+		01D016091C862CC900D44512 /* RouterResolvers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D016081C862CC900D44512 /* RouterResolvers.swift */; };
 		01D55AE81C0CEC7A006FA9E5 /* TMDBFilm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D55AE71C0CEC7A006FA9E5 /* TMDBFilm.swift */; };
 		01D55AEB1C0CF0F4006FA9E5 /* MayBeFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D55AEA1C0CF0F4006FA9E5 /* MayBeFull.swift */; };
 /* End PBXBuildFile section */
@@ -111,6 +116,11 @@
 		01B856D71C03AFEB00504CF0 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		01B856D91C03B2BA00504CF0 /* FilmsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmsProvider.swift; sourceTree = "<group>"; };
 		01B856DC1C03BD0000504CF0 /* URLMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLMaker.swift; sourceTree = "<group>"; };
+		01C9E2F21CA08D0300A2DEA5 /* ViewControllerResolvers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerResolvers.swift; path = Resolvers/ViewControllerResolvers/ViewControllerResolvers.swift; sourceTree = "<group>"; };
+		01C9E2F41CA08D8900A2DEA5 /* PresenterResolvers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresenterResolvers.swift; path = Resolvers/PresenterResolvers/PresenterResolvers.swift; sourceTree = "<group>"; };
+		01C9E2F71CA08E7500A2DEA5 /* DataManagerResolvers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManagerResolvers.swift; path = Resolvers/DataManagerResolvers/DataManagerResolvers.swift; sourceTree = "<group>"; };
+		01C9E2FA1CA08F7000A2DEA5 /* ProviderResolvers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProviderResolvers.swift; path = Resolvers/ProviderResolvers/ProviderResolvers.swift; sourceTree = "<group>"; };
+		01C9E2FD1CA0928F00A2DEA5 /* RepositoryResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoryResolver.swift; path = Resolvers/RepositoryResolvers/RepositoryResolver.swift; sourceTree = "<group>"; };
 		01CB67501C159E5A00FAC36F /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Repositories/Repository.swift; sourceTree = "<group>"; };
 		01CB67531C15A0D800FAC36F /* CoreDataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
 		01CB67691C15AFC000FAC36F /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
@@ -124,7 +134,7 @@
 		01CB677E1C15CD8B00FAC36F /* CoreDataBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataBuilder.swift; path = MOs/Protocols/CoreDataBuilder.swift; sourceTree = "<group>"; };
 		01CB67811C15D90B00FAC36F /* PersistenceObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceObject.swift; sourceTree = "<group>"; };
 		01CB67861C15E32A00FAC36F /* FilmRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmRepository.swift; sourceTree = "<group>"; };
-		01D016081C862CC900D44512 /* MainRouterResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainRouterResolver.swift; path = Resolvers/RouterResolvers/MainRouterResolver.swift; sourceTree = "<group>"; };
+		01D016081C862CC900D44512 /* RouterResolvers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouterResolvers.swift; path = Resolvers/RouterResolvers/RouterResolvers.swift; sourceTree = "<group>"; };
 		01D55AE71C0CEC7A006FA9E5 /* TMDBFilm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TMDBFilm.swift; path = NetEntities/TMDBFilm.swift; sourceTree = "<group>"; };
 		01D55AEA1C0CF0F4006FA9E5 /* MayBeFull.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MayBeFull.swift; path = Protocols/MayBeFull.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -460,6 +470,46 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		01C9E2F01CA08CCC00A2DEA5 /* ViewControllerResolvers */ = {
+			isa = PBXGroup;
+			children = (
+				01C9E2F21CA08D0300A2DEA5 /* ViewControllerResolvers.swift */,
+			);
+			name = ViewControllerResolvers;
+			sourceTree = "<group>";
+		};
+		01C9E2F11CA08CD700A2DEA5 /* PresenterResolvers */ = {
+			isa = PBXGroup;
+			children = (
+				01C9E2F41CA08D8900A2DEA5 /* PresenterResolvers.swift */,
+			);
+			name = PresenterResolvers;
+			sourceTree = "<group>";
+		};
+		01C9E2F61CA08E5E00A2DEA5 /* DataManagerResolvers */ = {
+			isa = PBXGroup;
+			children = (
+				01C9E2F71CA08E7500A2DEA5 /* DataManagerResolvers.swift */,
+			);
+			name = DataManagerResolvers;
+			sourceTree = "<group>";
+		};
+		01C9E2F91CA08F5600A2DEA5 /* ProviderResolvers */ = {
+			isa = PBXGroup;
+			children = (
+				01C9E2FA1CA08F7000A2DEA5 /* ProviderResolvers.swift */,
+			);
+			name = ProviderResolvers;
+			sourceTree = "<group>";
+		};
+		01C9E2FC1CA0927800A2DEA5 /* RepositoryResolver */ = {
+			isa = PBXGroup;
+			children = (
+				01C9E2FD1CA0928F00A2DEA5 /* RepositoryResolver.swift */,
+			);
+			name = RepositoryResolver;
+			sourceTree = "<group>";
+		};
 		01CB674E1C159D8F00FAC36F /* CoreDataStack */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,6 +548,11 @@
 		01D015FD1C862C0300D44512 /* Resolvers */ = {
 			isa = PBXGroup;
 			children = (
+				01C9E2FC1CA0927800A2DEA5 /* RepositoryResolver */,
+				01C9E2F91CA08F5600A2DEA5 /* ProviderResolvers */,
+				01C9E2F61CA08E5E00A2DEA5 /* DataManagerResolvers */,
+				01C9E2F11CA08CD700A2DEA5 /* PresenterResolvers */,
+				01C9E2F01CA08CCC00A2DEA5 /* ViewControllerResolvers */,
 				01D016071C862CA100D44512 /* RouterResolvers */,
 			);
 			name = Resolvers;
@@ -506,7 +561,7 @@
 		01D016071C862CA100D44512 /* RouterResolvers */ = {
 			isa = PBXGroup;
 			children = (
-				01D016081C862CC900D44512 /* MainRouterResolver.swift */,
+				01D016081C862CC900D44512 /* RouterResolvers.swift */,
 			);
 			name = RouterResolvers;
 			sourceTree = "<group>";
@@ -645,12 +700,15 @@
 				013F86391C0E2CFE00070167 /* TMDBGenre.swift in Sources */,
 				01CB67541C15A0D800FAC36F /* CoreDataRepository.swift in Sources */,
 				015F89BE1BFF7B62009F7D07 /* BaseViewController.swift in Sources */,
+				01C9E2F31CA08D0300A2DEA5 /* ViewControllerResolvers.swift in Sources */,
 				01B856DD1C03BD0000504CF0 /* URLMaker.swift in Sources */,
 				0163C3D81C0DB1C30043EF6B /* NowPlayingFilmsResponse.swift in Sources */,
+				01C9E2FE1CA0928F00A2DEA5 /* RepositoryResolver.swift in Sources */,
 				01CB677F1C15CD8B00FAC36F /* CoreDataBuilder.swift in Sources */,
 				01CB67781C15B28E00FAC36F /* KinoMO.swift in Sources */,
 				01CB676A1C15AFC000FAC36F /* List.swift in Sources */,
 				01CB67821C15D90B00FAC36F /* PersistenceObject.swift in Sources */,
+				01C9E2F51CA08D8900A2DEA5 /* PresenterResolvers.swift in Sources */,
 				019F11B31BFF926F00809FE4 /* Parseable.swift in Sources */,
 				0113749F1BFBBE9200464FE9 /* RoutedNavigationController.swift in Sources */,
 				013F86471C0E415A00070167 /* FilmReleasesResponse.swift in Sources */,
@@ -659,7 +717,7 @@
 				01D55AEB1C0CF0F4006FA9E5 /* MayBeFull.swift in Sources */,
 				019F11BA1BFFA75700809FE4 /* BaseProvider.swift in Sources */,
 				01CB677A1C15B28E00FAC36F /* FilmMO.swift in Sources */,
-				01D016091C862CC900D44512 /* MainRouterResolver.swift in Sources */,
+				01D016091C862CC900D44512 /* RouterResolvers.swift in Sources */,
 				01CB676C1C15AFCF00FAC36F /* Genre.swift in Sources */,
 				01062F9D1BFA7B9B005E7C46 /* PresentersDependenciesResolver.swift in Sources */,
 				01062F7D1BFA684C005E7C46 /* GeneralFunctions.swift in Sources */,
@@ -680,6 +738,8 @@
 				01062F911BFA7227005E7C46 /* BillboardPresenter.swift in Sources */,
 				013F86431C0E390700070167 /* FilmResponse.swift in Sources */,
 				01CB677C1C15CCB300FAC36F /* DomainObject.swift in Sources */,
+				01C9E2FB1CA08F7000A2DEA5 /* ProviderResolvers.swift in Sources */,
+				01C9E2F81CA08E7500A2DEA5 /* DataManagerResolvers.swift in Sources */,
 				01026F3E1C5FE97D00500992 /* FilmTableViewCell.swift in Sources */,
 				01062F841BFA6D00005E7C46 /* MainRouter.swift in Sources */,
 			);
