@@ -11,5 +11,5 @@ import Foundation
 protocol PersistenceObject {
     // The persistence object must have a id property.
     // We use RelationshipObjectType to relate the domain object type with the persitence object type
-    typealias RelationshipObjectType: DomainObject
+    associatedtype RelationshipObjectType: DomainObject
 }

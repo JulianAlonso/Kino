@@ -9,7 +9,7 @@
 import Foundation
 
 protocol Repository {
-    typealias DataType: PersistenceObject
+    associatedtype DataType: PersistenceObject
     
     func objectById(id: String, completion: (inner: () throws -> DataType?) -> Void)
     func createOrUpdateObject(object: DataType.RelationshipObjectType, completion: (inner: () throws -> DataType) -> Void)

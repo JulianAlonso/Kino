@@ -25,7 +25,7 @@ class RoutedNavigationController: UINavigationController {
         super.init(rootViewController: router.viewController)
     }
     
-    func pushRouter(var router: Router) {
+    func pushRouter(inout router: Router) {
         self.routers.append(router)
         router.navigationController = self
         router.pushFromNavigationController(self)

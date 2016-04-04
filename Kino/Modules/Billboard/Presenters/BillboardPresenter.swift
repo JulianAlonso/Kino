@@ -22,7 +22,7 @@ final class BillboardPresenter : BasePresenter, BillboardEventHandler {
     }
     
     func updateView() {
-        self.filmDataManager.updateNowPlayingFilms()
+        self.filmDataManager.updateUncomingFilms()
     }
     
 }

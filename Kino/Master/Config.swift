@@ -42,7 +42,7 @@ class ConfigSingleton {
     
 }
 
-//TODO: 🤔Try to do the Config with more Dictionaries with the same name that enums classes🤔
+// TODO: 🤔Try to do the Config with more Dictionaries with the same name that enums classes🤔
 // MARK: - Values
 enum API: String {
     case ApiKey

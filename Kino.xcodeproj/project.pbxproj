@@ -26,7 +26,6 @@
 		0113749F1BFBBE9200464FE9 /* RoutedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0113749E1BFBBE9200464FE9 /* RoutedNavigationController.swift */; };
 		011374A21BFBBF2C00464FE9 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011374A11BFBBF2C00464FE9 /* BaseRouter.swift */; };
 		011374A81BFBE39200464FE9 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011374A71BFBE39200464FE9 /* BasePresenter.swift */; };
-		0115351E1C8F71150004ED02 /* Janet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011534EB1C8F68300004ED02 /* Janet.framework */; };
 		011535201C8F71150004ED02 /* Jalver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0115351F1C8F71150004ED02 /* Jalver.framework */; };
 		0120FC871C04FAD200E6460E /* PopularFilmsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0120FC861C04FAD200E6460E /* PopularFilmsResponse.swift */; };
 		013F86391C0E2CFE00070167 /* TMDBGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F86381C0E2CFE00070167 /* TMDBGenre.swift */; };
@@ -44,6 +43,7 @@
 		019F11B31BFF926F00809FE4 /* Parseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11B21BFF926F00809FE4 /* Parseable.swift */; };
 		019F11B51BFF9F7900809FE4 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11B41BFF9F7900809FE4 /* Film.swift */; };
 		019F11BA1BFFA75700809FE4 /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11B91BFFA75700809FE4 /* BaseProvider.swift */; };
+		01A20C141CB2E86A00093843 /* UpcomingFilmsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A20C131CB2E86A00093843 /* UpcomingFilmsResponse.swift */; };
 		01B856D61C03AAB800504CF0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B856D51C03AAB800504CF0 /* Config.swift */; };
 		01B856D81C03AFEB00504CF0 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01B856D71C03AFEB00504CF0 /* Config.plist */; };
 		01B856DA1C03B2BA00504CF0 /* FilmsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B856D91C03B2BA00504CF0 /* FilmsProvider.swift */; };
@@ -94,7 +94,6 @@
 		0113749E1BFBBE9200464FE9 /* RoutedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutedNavigationController.swift; sourceTree = "<group>"; };
 		011374A11BFBBF2C00464FE9 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		011374A71BFBE39200464FE9 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
-		011534EB1C8F68300004ED02 /* Janet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Janet.framework; path = Carthage/Build/iOS/Janet.framework; sourceTree = "<group>"; };
 		0115351F1C8F71150004ED02 /* Jalver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Jalver.framework; path = Carthage/Build/iOS/Jalver.framework; sourceTree = "<group>"; };
 		0120FC861C04FAD200E6460E /* PopularFilmsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularFilmsResponse.swift; sourceTree = "<group>"; };
 		013F86381C0E2CFE00070167 /* TMDBGenre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TMDBGenre.swift; path = NetEntities/TMDBGenre.swift; sourceTree = "<group>"; };
@@ -112,6 +111,7 @@
 		019F11B21BFF926F00809FE4 /* Parseable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parseable.swift; sourceTree = "<group>"; };
 		019F11B41BFF9F7900809FE4 /* Film.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		019F11B91BFFA75700809FE4 /* BaseProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseProvider.swift; sourceTree = "<group>"; };
+		01A20C131CB2E86A00093843 /* UpcomingFilmsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingFilmsResponse.swift; sourceTree = "<group>"; };
 		01B856D51C03AAB800504CF0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		01B856D71C03AFEB00504CF0 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		01B856D91C03B2BA00504CF0 /* FilmsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmsProvider.swift; sourceTree = "<group>"; };
@@ -145,7 +145,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				011535201C8F71150004ED02 /* Jalver.framework in Frameworks */,
-				0115351E1C8F71150004ED02 /* Janet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,8 +276,8 @@
 		01062F861BFA7070005E7C46 /* Billboard */ = {
 			isa = PBXGroup;
 			children = (
-				01062F8D1BFA71ED005E7C46 /* Presenters */,
 				01062F871BFA707D005E7C46 /* Routers */,
+				01062F8D1BFA71ED005E7C46 /* Presenters */,
 				01062F8E1BFA71F3005E7C46 /* ViewControllers */,
 				01062F8F1BFA71F6005E7C46 /* Views */,
 			);
@@ -416,6 +415,7 @@
 			children = (
 				019F11AA1BFF896A00809FE4 /* Response.swift */,
 				0120FC861C04FAD200E6460E /* PopularFilmsResponse.swift */,
+				01A20C131CB2E86A00093843 /* UpcomingFilmsResponse.swift */,
 				0163C3D71C0DB1C30043EF6B /* NowPlayingFilmsResponse.swift */,
 				013F86421C0E390700070167 /* FilmResponse.swift */,
 				013F86461C0E415A00070167 /* FilmReleasesResponse.swift */,
@@ -589,7 +589,6 @@
 			isa = PBXGroup;
 			children = (
 				0115351F1C8F71150004ED02 /* Jalver.framework */,
-				011534EB1C8F68300004ED02 /* Janet.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -671,7 +670,6 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Jalver.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Janet.framework",
 			);
 			name = "Carthage rebuild & copy frameworks";
 			outputPaths = (
@@ -697,6 +695,7 @@
 				019F11AB1BFF896A00809FE4 /* Response.swift in Sources */,
 				01062F9F1BFA7BB1005E7C46 /* ViewControllersDependenciesResolver.swift in Sources */,
 				01062F6A1BFA6639005E7C46 /* Kino.xcdatamodeld in Sources */,
+				01A20C141CB2E86A00093843 /* UpcomingFilmsResponse.swift in Sources */,
 				013F86391C0E2CFE00070167 /* TMDBGenre.swift in Sources */,
 				01CB67541C15A0D800FAC36F /* CoreDataRepository.swift in Sources */,
 				015F89BE1BFF7B62009F7D07 /* BaseViewController.swift in Sources */,

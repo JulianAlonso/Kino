@@ -40,7 +40,7 @@ extension CoreDataRepository where DataType: KinoMO, DataType: CoreDataBuilder {
                 } catch {
                     DLog("Error on create or update objets: \(error)")
                 }
-                count++
+                count += 1
                 if count == objects.count {
                     DLog("Objects are updated")
                     self.writeManagedObjectContext.performBlock({ () -> Void in

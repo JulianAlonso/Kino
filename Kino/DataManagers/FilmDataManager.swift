@@ -15,33 +15,26 @@ final class FilmDataManager: BaseDataManager<FilmsProvider, FilmRepository> {
     }
     
     func updateNowPlayingFilms() {
-        self.provider.nowPlayingFilms { (films: [TMDBFilm]) -> Void in
+        self.provider.nowPlayingFilms { self.completeAndSaveFilms($0) }
+    }
+    
+    func updateUncomingFilms() {
+        self.provider.upcomingFilms { self.completeAndSaveFilms($0) }
+    }
+    
+    // MARK: - Private methods
+    private func completeAndSaveFilms(films: [TMDBFilm]) {
+        self.provider.completeFilms(films, completion: { (films: [TMDBFilm]) in
+            let fullFilms = films.flatMap({ return ($0.isFull()) ? $0 : nil })
             
-            let whenCompletedFilmIsReady = { (films: [TMDBFilm]) -> Void in
-                self.repository.createOrUpdateObjects(films, completion: { (inner) -> Void in
-                    do {
-                        DLog("✅Saved this films: \(try inner())")
-                    } catch let error {
-                        DLog("‼️Error updating films: \n \(error)")
-                    }
-                })
-            };
-            
-            var completedFilms = [TMDBFilm]()
-            for film in films {
-                self.provider.completeFilm(film, completion: { (film: TMDBFilm?) -> Void in
-                    if let film = film {
-                        if film.isFull() {
-                            completedFilms.append(film)
-                        }
-                    }
-                    if film == films.last {
-                        whenCompletedFilmIsReady(completedFilms)
-                    }
-                })
-            }
-            
-        }
+            self.repository.createOrUpdateObjects(fullFilms, completion: { (inner) in
+                do {
+                    DLog("✅Saved this films: \(try inner())")
+                } catch let error {
+                    DLog("‼️Error updating films: \n \(error)")
+                }
+            })
+        })
     }
     
 }

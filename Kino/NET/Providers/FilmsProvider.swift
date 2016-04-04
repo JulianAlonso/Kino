@@ -34,6 +34,18 @@ class FilmsProvider: BaseProvider {
         }
     }
     
+    // MARK: - Upcoming Film Methods
+    func upcomingFilms(completion: FilmArrayCompletion) {
+        self.connect(Config[Endpoints.UpcomingFilmsEndpoint] as! String, params: NSDictionary()) { (inner: Void throws -> UpcomingFilmsResponse) in
+            do {
+                let response = try inner()
+                completion(response.films)
+            } catch let error {
+                DLog(error)
+            }
+        }
+    }
+    
     // MARK: - Complete Film Methods
     func completeFilms(films: Array<TMDBFilm>, completion: FilmArrayCompletion) {
         var completedFilms = [TMDBFilm]()

@@ -7,7 +7,4 @@
    <FileRef
       location = "group:Carthage/Checkouts/Jalver/Jalver.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/Jalver/../Janet/Janet.xcodeproj">
-   </FileRef>
 </Workspace>

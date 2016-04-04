@@ -106,8 +106,8 @@ class CoreDataManager {
     }()
     
     private func registerNotifications() {
-        self.notificationCenter.addObserver(self, selector: "didSaveNotification:", name: NSManagedObjectContextDidSaveNotification, object: self.readMOC)
-        self.notificationCenter.addObserver(self, selector: "didSaveNotification:", name: NSManagedObjectContextDidSaveNotification, object: self.writerMOC)
+        self.notificationCenter.addObserver(self, selector: #selector(CoreDataManager.didSaveNotification(_:)), name: NSManagedObjectContextDidSaveNotification, object: self.readMOC)
+        self.notificationCenter.addObserver(self, selector: #selector(CoreDataManager.didSaveNotification(_:)), name: NSManagedObjectContextDidSaveNotification, object: self.writerMOC)
     }
     
     @objc func didSaveNotification(notification: NSNotification) {
