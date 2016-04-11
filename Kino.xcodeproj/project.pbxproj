@@ -69,6 +69,10 @@
 		01D016091C862CC900D44512 /* RouterResolvers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D016081C862CC900D44512 /* RouterResolvers.swift */; };
 		01D55AE81C0CEC7A006FA9E5 /* TMDBFilm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D55AE71C0CEC7A006FA9E5 /* TMDBFilm.swift */; };
 		01D55AEB1C0CF0F4006FA9E5 /* MayBeFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D55AEA1C0CF0F4006FA9E5 /* MayBeFull.swift */; };
+		01D6AC211CBC2503005FA81B /* FilmReleaseMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D6AC1D1CBC2503005FA81B /* FilmReleaseMO+CoreDataProperties.swift */; };
+		01D6AC221CBC2503005FA81B /* FilmReleaseMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D6AC1E1CBC2503005FA81B /* FilmReleaseMO.swift */; };
+		01D6AC231CBC2503005FA81B /* GenreMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D6AC1F1CBC2503005FA81B /* GenreMO+CoreDataProperties.swift */; };
+		01D6AC241CBC2503005FA81B /* GenreMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D6AC201CBC2503005FA81B /* GenreMO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,6 +141,10 @@
 		01D016081C862CC900D44512 /* RouterResolvers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RouterResolvers.swift; path = Resolvers/RouterResolvers/RouterResolvers.swift; sourceTree = "<group>"; };
 		01D55AE71C0CEC7A006FA9E5 /* TMDBFilm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TMDBFilm.swift; path = NetEntities/TMDBFilm.swift; sourceTree = "<group>"; };
 		01D55AEA1C0CF0F4006FA9E5 /* MayBeFull.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MayBeFull.swift; path = Protocols/MayBeFull.swift; sourceTree = "<group>"; };
+		01D6AC1D1CBC2503005FA81B /* FilmReleaseMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FilmReleaseMO+CoreDataProperties.swift"; path = "MOs/FilmReleaseMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		01D6AC1E1CBC2503005FA81B /* FilmReleaseMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilmReleaseMO.swift; path = MOs/FilmReleaseMO.swift; sourceTree = "<group>"; };
+		01D6AC1F1CBC2503005FA81B /* GenreMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "GenreMO+CoreDataProperties.swift"; path = "MOs/GenreMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		01D6AC201CBC2503005FA81B /* GenreMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenreMO.swift; path = MOs/GenreMO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +370,10 @@
 				01CB67741C15B28E00FAC36F /* KinoMO.swift */,
 				01CB67751C15B28E00FAC36F /* FilmMO+CoreDataProperties.swift */,
 				01CB67761C15B28E00FAC36F /* FilmMO.swift */,
+				01D6AC1D1CBC2503005FA81B /* FilmReleaseMO+CoreDataProperties.swift */,
+				01D6AC1E1CBC2503005FA81B /* FilmReleaseMO.swift */,
+				01D6AC1F1CBC2503005FA81B /* GenreMO+CoreDataProperties.swift */,
+				01D6AC201CBC2503005FA81B /* GenreMO.swift */,
 			);
 			name = MOs;
 			sourceTree = "<group>";
@@ -698,6 +710,7 @@
 				01A20C141CB2E86A00093843 /* UpcomingFilmsResponse.swift in Sources */,
 				013F86391C0E2CFE00070167 /* TMDBGenre.swift in Sources */,
 				01CB67541C15A0D800FAC36F /* CoreDataRepository.swift in Sources */,
+				01D6AC241CBC2503005FA81B /* GenreMO.swift in Sources */,
 				015F89BE1BFF7B62009F7D07 /* BaseViewController.swift in Sources */,
 				01C9E2F31CA08D0300A2DEA5 /* ViewControllerResolvers.swift in Sources */,
 				01B856DD1C03BD0000504CF0 /* URLMaker.swift in Sources */,
@@ -717,6 +730,7 @@
 				019F11BA1BFFA75700809FE4 /* BaseProvider.swift in Sources */,
 				01CB677A1C15B28E00FAC36F /* FilmMO.swift in Sources */,
 				01D016091C862CC900D44512 /* RouterResolvers.swift in Sources */,
+				01D6AC211CBC2503005FA81B /* FilmReleaseMO+CoreDataProperties.swift in Sources */,
 				01CB676C1C15AFCF00FAC36F /* Genre.swift in Sources */,
 				01062F9D1BFA7B9B005E7C46 /* PresentersDependenciesResolver.swift in Sources */,
 				01062F7D1BFA684C005E7C46 /* GeneralFunctions.swift in Sources */,
@@ -737,9 +751,11 @@
 				01062F911BFA7227005E7C46 /* BillboardPresenter.swift in Sources */,
 				013F86431C0E390700070167 /* FilmResponse.swift in Sources */,
 				01CB677C1C15CCB300FAC36F /* DomainObject.swift in Sources */,
+				01D6AC221CBC2503005FA81B /* FilmReleaseMO.swift in Sources */,
 				01C9E2FB1CA08F7000A2DEA5 /* ProviderResolvers.swift in Sources */,
 				01C9E2F81CA08E7500A2DEA5 /* DataManagerResolvers.swift in Sources */,
 				01026F3E1C5FE97D00500992 /* FilmTableViewCell.swift in Sources */,
+				01D6AC231CBC2503005FA81B /* GenreMO+CoreDataProperties.swift in Sources */,
 				01062F841BFA6D00005E7C46 /* MainRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

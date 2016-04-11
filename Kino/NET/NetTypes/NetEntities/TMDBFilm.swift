@@ -17,6 +17,7 @@ struct TMDBFilm {
     let runtime: Int
     let overview: String?
     let posterPath: String?
+    let backdropPath: String?
     let voteAverage: Double?
     let voteCount: Int?
     let genres: [TMDBGenre]?
@@ -31,6 +32,7 @@ struct TMDBFilm {
                     originalTitle: self.originalTitle,
                     overview: self.overview as String!,
                     posterPath: self.posterPath as String!,
+                    backdropPath:  self.backdropPath as String!,
                     runtime: self.runtime as Int!,
                     voteAverage: self.voteAverage as Double!,
                     voteCount: self.voteCount as Int!)
@@ -45,6 +47,7 @@ extension TMDBFilm: MayBeFull {
     func isFull() -> Bool {
         return self.overview != nil &&
             self.posterPath != nil &&
+            self.backdropPath != nil && //Think about this...
             self.voteAverage != nil &&
             self.voteCount != nil &&
             self.genres != nil
@@ -81,6 +84,7 @@ extension TMDBFilm: Parseable {
         self.originalTitle = originalTitle
         self.overview = dictionary[Fields.Overview] as? String
         self.posterPath = dictionary[Fields.PosterPath] as? String
+        self.backdropPath = dictionary[Fields.BackdropPath] as? String
         if let runtime = dictionary[Fields.Runtime] as? Int {
             self.runtime = runtime
         } else {
@@ -110,7 +114,7 @@ extension TMDBFilm: Parseable {
         static let OriginalTitle = "original_title"
         static let Overview = "overview"
         static let PosterPath = "poster_path"
-        static let BackgropPath = "backgrop_path"
+        static let BackdropPath = "backdrop_path"
         static let Runtime = "runtime"
         static let VoteAverage = "vote_average"
         static let VoteCount = "vote_count"

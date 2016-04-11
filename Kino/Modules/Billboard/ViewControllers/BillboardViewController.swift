@@ -16,7 +16,7 @@ protocol BillboardEventHandler {
 }
 
 
-final class BillboardViewController: BaseViewController, NSFetchedResultsControllerDelegate, UITableViewDataSource {
+final class BillboardViewController: BaseViewController, NSFetchedResultsControllerDelegate, UITableViewDataSource, UITableViewDelegate {
     
     var eventHandler: BillboardEventHandler?
     
@@ -33,6 +33,7 @@ final class BillboardViewController: BaseViewController, NSFetchedResultsControl
         super.viewDidLoad()
         self.fetchResultController.delegate = self
         self.tableView.dataSource = self
+        self.tableView.delegate = self
         self.tableView.registerNib(UINib(nibName: "\(FilmTableViewCell.self)", bundle: nil), forCellReuseIdentifier: "\(FilmTableViewCell.self)")
         do {
             try self.fetchResultController.performFetch()
@@ -60,5 +61,19 @@ final class BillboardViewController: BaseViewController, NSFetchedResultsControl
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.fetchResultController.sections![0].numberOfObjects
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        DLog("Selected item \(self.fetchResultController.objectAtIndexPath(indexPath))")
+    }
+    
+    // MARK: - NSFetchedResultsControllerDelegate
+    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+        do {
+            try self.fetchResultController.performFetch()
+            self.tableView.reloadData()
+        } catch let error {
+            DLog(error)
+        }
     }
 }

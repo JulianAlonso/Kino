@@ -16,17 +16,19 @@ struct Film: DomainObject {
     let originalTitle: String
     let overview: String
     let posterPath: String
+    let backdropPath: String
     let runtime: Int
     let voteAverage: Double
     let voteCount: Int
     
-    init(id: String, title: String, originalLanguage: String, originalTitle: String, overview: String, posterPath: String, runtime: Int, voteAverage: Double, voteCount: Int) {
+    init(id: String, title: String, originalLanguage: String, originalTitle: String, overview: String, posterPath: String, backdropPath: String, runtime: Int, voteAverage: Double, voteCount: Int) {
         self.id = id
         self.title = title
         self.originalLanguage = originalLanguage
         self.originalTitle = originalTitle
         self.overview = overview
         self.posterPath = posterPath
+        self.backdropPath = backdropPath
         self.runtime = runtime
         self.voteAverage = voteAverage
         self.voteCount = voteCount

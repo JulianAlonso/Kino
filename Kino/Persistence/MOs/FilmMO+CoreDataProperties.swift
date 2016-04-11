@@ -2,8 +2,8 @@
 //  FilmMO+CoreDataProperties.swift
 //  Kino
 //
-//  Created by Julian Alonso on 7/12/15.
-//  Copyright © 2015 Julian. All rights reserved.
+//  Created by Julian Alonso on 11/4/16.
+//  Copyright © 2016 Julian. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
 //  to delete and recreate this implementation file for your updated model.
@@ -20,7 +20,7 @@ extension FilmMO {
     @NSManaged var overview: String?
     @NSManaged var posterPath: String?
     @NSManaged var releaseDate: NSDate?
-    @NSManaged var runtime: String?
+    @NSManaged var runtime: NSNumber?
     @NSManaged var tagline: String?
     @NSManaged var title: String?
     @NSManaged var type: String?

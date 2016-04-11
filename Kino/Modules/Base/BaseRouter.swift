@@ -15,9 +15,6 @@ protocol Router {
 }
 
 extension Router {
-    func configure() {
-        DLog("🤔Think about override this to configure your router!🤔")
-    }
     
     func pushFromNavigationController(navigationController: UINavigationController) {
         navigationController.pushViewController(self.viewController, animated: true)
@@ -26,6 +23,7 @@ extension Router {
     func loadViewAtTabBarController(tabBarController: UITabBarController) {
         tabBarController.addChildViewController(self.viewController)
     }
+    
 }
 
 class BaseRouter<VC: UIViewController, P: Presenter> : Router {
@@ -44,8 +42,6 @@ class BaseRouter<VC: UIViewController, P: Presenter> : Router {
         
         self.realPresenter = presenter
         self.realViewController = viewController
-        
-        self.configure()
     }
     
 }

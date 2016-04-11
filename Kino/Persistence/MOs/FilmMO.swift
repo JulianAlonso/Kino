@@ -24,20 +24,44 @@ final class FilmMO: KinoMO, CoreDataBuilder {
         filmMO.id = object.id
         filmMO.title = object.title
         filmMO.originalTitle = object.originalTitle
-        //backdrop not done 😅
+        filmMO.backdropPath = object.backdropPath
         //homepage not done
         filmMO.overview = object.overview
         filmMO.posterPath = object.posterPath
-//        filmMO.filmReleases = object.releaseDates.map({ (filmRelease: TMDBFilmRelease) -> FilmRelease in
-//            return 
-//        })
+        filmMO.runtime = object.runtime
+        filmMO.voteAverage = object.voteAverage
+        filmMO.votes = object.voteCount
         
+        if let genres = object.genres {
+            let genremos = genres.map({ GenreMO.create($0, managedObjectContext: managedObjectContext) })
+            filmMO.filmGenres = NSOrderedSet(array: genremos)
+        }
+        if let releaseDates = object.releaseDates {
+            let dates = releaseDates.map({ FilmReleaseMO.create($0, managedObjectContext: managedObjectContext) })
+            filmMO.filmReleases = NSSet(array: dates)
+        }
         
         return filmMO
     }
     
     func merge(object: RelationshipObjectType) {
-        DLog("Merging object.");
+        
+        self.title = object.title
+        self.originalTitle = object.originalTitle
+        self.backdropPath = object.backdropPath
+        //homepage not done
+        self.overview = object.overview
+        self.posterPath = object.posterPath
+        self.runtime = object.runtime
+        self.voteAverage = object.voteAverage
+        self.votes = object.voteCount
+        
+        if let genres = object.genres {
+            self.filmGenres = NSOrderedSet(array: genres.map({ GenreMO.create($0, managedObjectContext: self.managedObjectContext!) }))
+        }
+        if let releaseDates = object.releaseDates {
+            self.filmReleases = NSSet(array: (releaseDates.map({ FilmReleaseMO.create($0, managedObjectContext: self.managedObjectContext!) })))
+        }
     }
 
 }

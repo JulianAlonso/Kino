@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
     <entity name="FilmMO" representedClassName=".FilmMO" parentEntity="KinoMO" syncable="YES">
         <attribute name="backdropPath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="homepage" optional="YES" attributeType="String" syncable="YES"/>
@@ -7,7 +7,7 @@
         <attribute name="overview" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="posterPath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="releaseDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="runtime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="runtime" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="tagline" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
@@ -38,7 +38,7 @@
         <element name="FilmMO" positionX="-63" positionY="-18" width="128" height="270"/>
         <element name="FilmReleaseMO" positionX="189" positionY="90" width="128" height="105"/>
         <element name="GenreMO" positionX="117" positionY="54" width="128" height="75"/>
-        <element name="ListMO" positionX="439" positionY="116" width="128" height="75"/>
         <element name="KinoMO" positionX="144" positionY="108" width="128" height="60"/>
+        <element name="ListMO" positionX="439" positionY="116" width="128" height="75"/>
     </elements>
 </model>
