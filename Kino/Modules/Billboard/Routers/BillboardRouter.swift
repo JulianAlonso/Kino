@@ -12,10 +12,9 @@ final class BillboardRouter: BaseRouter<BillboardViewController, BillboardPresen
     
     override init(viewController: BillboardViewController, presenter: BillboardPresenter) {
         super.init(viewController: viewController, presenter: presenter)
-        self.configure()
     }
     
-    func configure() {
+    func postInit() {
         self.realViewController.eventHandler = self.realPresenter
     }
     
