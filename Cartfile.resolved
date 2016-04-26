@@ -1,2 +1,4 @@
-git "https://github.com/JulianAlonso/Jalver" "a6bb2afdcbca64240aab928497c97c9bb06035a2"
-git "https://github.com/JulianAlonso/Janet" "3f2b349107e43a1c664b5722d541e99912d43293"
+git "https://github.com/JulianAlonso/Jalver" "0e4e7e792c7b1341ebfb907f0580d7fd2002476e"
+git "https://github.com/JulianAlonso/Janet" "5d07d0ee67fd5f5bbc7d3f6f618c3823043529dd"
+github "Quick/Nimble" "v4.0.1"
+github "Quick/Quick" "v0.9.2"
