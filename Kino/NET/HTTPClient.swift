@@ -19,6 +19,14 @@ extension HTTPClient {
         let session = NSURLSession.sharedSession()
         DLog("Request to url: \(url) \n With response type = \(T.self)")
         session.dataTaskWithURL(url) { (data, nsurlResponse, opError) -> Void in
+            
+            if let httpResponse = nsurlResponse as? NSHTTPURLResponse {
+                if httpResponse.statusCode != 200 {
+                    completion(inner: { throw HTTPClientError(rawValue: httpResponse.statusCode) ?? HTTPClientError.DefaultError })
+                    return
+                }
+            }
+            
             guard let data = data else { return }
             do {
                 let object = try NSJSONSerialization.JSONObjectWithData(data, options: []) as AnyObject
@@ -33,4 +41,11 @@ extension HTTPClient {
             }
         }.resume()
     }
+}
+
+enum HTTPClientError: Int, ErrorType {
+    
+    case PageNotFound = 404
+    case DefaultError
+    
 }

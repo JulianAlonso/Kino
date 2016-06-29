@@ -27,7 +27,76 @@
 		011374A21BFBBF2C00464FE9 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011374A11BFBBF2C00464FE9 /* BaseRouter.swift */; };
 		011374A81BFBE39200464FE9 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011374A71BFBE39200464FE9 /* BasePresenter.swift */; };
 		011535201C8F71150004ED02 /* Jalver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0115351F1C8F71150004ED02 /* Jalver.framework */; };
+		011836841CCF7F7000EFA703 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011836821CCF7F7000EFA703 /* Nimble.framework */; };
+		011836851CCF7F7000EFA703 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011836831CCF7F7000EFA703 /* Quick.framework */; };
+		011836871CCF809100EFA703 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 011836821CCF7F7000EFA703 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		011836881CCF809100EFA703 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 011836831CCF7F7000EFA703 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0120FC871C04FAD200E6460E /* PopularFilmsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0120FC861C04FAD200E6460E /* PopularFilmsResponse.swift */; };
+		0127BDF91D242A37004EE63E /* KinoHTTPClientSpect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0127BDF81D242A37004EE63E /* KinoHTTPClientSpect.swift */; };
+		0127BDFA1D242EEA004EE63E /* RepositoryResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9E2FD1CA0928F00A2DEA5 /* RepositoryResolver.swift */; };
+		0127BDFB1D242F02004EE63E /* ProviderResolvers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9E2FA1CA08F7000A2DEA5 /* ProviderResolvers.swift */; };
+		0127BDFC1D242F02004EE63E /* DataManagerResolvers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9E2F71CA08E7500A2DEA5 /* DataManagerResolvers.swift */; };
+		0127BDFD1D242F02004EE63E /* PresenterResolvers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9E2F41CA08D8900A2DEA5 /* PresenterResolvers.swift */; };
+		0127BDFE1D242F02004EE63E /* ViewControllerResolvers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9E2F21CA08D0300A2DEA5 /* ViewControllerResolvers.swift */; };
+		0127BDFF1D242F02004EE63E /* RouterResolvers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D016081C862CC900D44512 /* RouterResolvers.swift */; };
+		0127BE001D242F02004EE63E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B856D51C03AAB800504CF0 /* Config.swift */; };
+		0127BE011D242F02004EE63E /* GeneralFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01062F7C1BFA684C005E7C46 /* GeneralFunctions.swift */; };
+		0127BE021D242F02004EE63E /* Parseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11B21BFF926F00809FE4 /* Parseable.swift */; };
+		0127BE031D242F02004EE63E /* PresentersDependenciesResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01062F9C1BFA7B9B005E7C46 /* PresentersDependenciesResolver.swift */; };
+		0127BE041D242F02004EE63E /* RoutersDependenciesResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01062F9A1BFA7B05005E7C46 /* RoutersDependenciesResolver.swift */; };
+		0127BE051D242F02004EE63E /* ViewControllersDependenciesResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01062F9E1BFA7BB1005E7C46 /* ViewControllersDependenciesResolver.swift */; };
+		0127BE061D242F02004EE63E /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11A31BFF883600809FE4 /* HTTPClient.swift */; };
+		0127BE071D242F02004EE63E /* KinoHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11A61BFF886200809FE4 /* KinoHTTPClient.swift */; };
+		0127BE081D242F02004EE63E /* MayBeFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D55AEA1C0CF0F4006FA9E5 /* MayBeFull.swift */; };
+		0127BE091D242F02004EE63E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11AA1BFF896A00809FE4 /* Response.swift */; };
+		0127BE0A1D242F02004EE63E /* PopularFilmsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0120FC861C04FAD200E6460E /* PopularFilmsResponse.swift */; };
+		0127BE0B1D242F02004EE63E /* UpcomingFilmsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A20C131CB2E86A00093843 /* UpcomingFilmsResponse.swift */; };
+		0127BE0C1D242F02004EE63E /* NowPlayingFilmsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0163C3D71C0DB1C30043EF6B /* NowPlayingFilmsResponse.swift */; };
+		0127BE0D1D242F02004EE63E /* FilmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F86421C0E390700070167 /* FilmResponse.swift */; };
+		0127BE0E1D242F02004EE63E /* FilmReleasesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F86461C0E415A00070167 /* FilmReleasesResponse.swift */; };
+		0127BE0F1D242F02004EE63E /* TMDBFilm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D55AE71C0CEC7A006FA9E5 /* TMDBFilm.swift */; };
+		0127BE101D242F02004EE63E /* TMDBGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F86381C0E2CFE00070167 /* TMDBGenre.swift */; };
+		0127BE111D242F02004EE63E /* TMDBFilmRelease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F86441C0E3CC400070167 /* TMDBFilmRelease.swift */; };
+		0127BE121D242F02004EE63E /* TMDBProviderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F86401C0E343200070167 /* TMDBProviderTypes.swift */; };
+		0127BE131D242F02004EE63E /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11B91BFFA75700809FE4 /* BaseProvider.swift */; };
+		0127BE141D242F02004EE63E /* FilmsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B856D91C03B2BA00504CF0 /* FilmsProvider.swift */; };
+		0127BE151D242F02004EE63E /* URLMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B856DC1C03BD0000504CF0 /* URLMaker.swift */; };
+		0127BE161D242F02004EE63E /* PersistenceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB67811C15D90B00FAC36F /* PersistenceObject.swift */; };
+		0127BE171D242F02004EE63E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB67501C159E5A00FAC36F /* Repository.swift */; };
+		0127BE181D242F02004EE63E /* CoreDataBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB677E1C15CD8B00FAC36F /* CoreDataBuilder.swift */; };
+		0127BE191D242F02004EE63E /* KinoMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB67731C15B28E00FAC36F /* KinoMO+CoreDataProperties.swift */; };
+		0127BE1A1D242F02004EE63E /* KinoMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB67741C15B28E00FAC36F /* KinoMO.swift */; };
+		0127BE1B1D242F02004EE63E /* FilmMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB67751C15B28E00FAC36F /* FilmMO+CoreDataProperties.swift */; };
+		0127BE1C1D242F02004EE63E /* FilmMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB67761C15B28E00FAC36F /* FilmMO.swift */; };
+		0127BE1D1D242F02004EE63E /* FilmReleaseMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D6AC1D1CBC2503005FA81B /* FilmReleaseMO+CoreDataProperties.swift */; };
+		0127BE1E1D242F02004EE63E /* FilmReleaseMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D6AC1E1CBC2503005FA81B /* FilmReleaseMO.swift */; };
+		0127BE1F1D242F02004EE63E /* GenreMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D6AC1F1CBC2503005FA81B /* GenreMO+CoreDataProperties.swift */; };
+		0127BE201D242F02004EE63E /* GenreMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D6AC201CBC2503005FA81B /* GenreMO.swift */; };
+		0127BE211D242F02004EE63E /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB67531C15A0D800FAC36F /* CoreDataRepository.swift */; };
+		0127BE221D242F02004EE63E /* FilmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB67861C15E32A00FAC36F /* FilmRepository.swift */; };
+		0127BE231D242F02004EE63E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01062F781BFA66CD005E7C46 /* CoreDataManager.swift */; };
+		0127BE241D242F02004EE63E /* Kino.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01062F681BFA6639005E7C46 /* Kino.xcdatamodeld */; };
+		0127BE251D242F02004EE63E /* BaseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019C48621C15F08E000FC8AF /* BaseDataManager.swift */; };
+		0127BE261D242F02004EE63E /* FilmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019C48601C15ED11000FC8AF /* FilmDataManager.swift */; };
+		0127BE271D242F02004EE63E /* DomainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB677B1C15CCB300FAC36F /* DomainObject.swift */; };
+		0127BE281D242F02004EE63E /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11B41BFF9F7900809FE4 /* Film.swift */; };
+		0127BE291D242F02004EE63E /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB67691C15AFC000FAC36F /* List.swift */; };
+		0127BE2A1D242F02004EE63E /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB676B1C15AFCF00FAC36F /* Genre.swift */; };
+		0127BE2B1D242F02004EE63E /* FilmRelease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB676D1C15AFDE00FAC36F /* FilmRelease.swift */; };
+		0127BE2C1D242F02004EE63E /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01026F3C1C5FE97D00500992 /* FilmTableViewCell.swift */; };
+		0127BE2D1D242F02004EE63E /* FilmTableViewCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 01026F3D1C5FE97D00500992 /* FilmTableViewCell.xib */; };
+		0127BE2E1D242F02004EE63E /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011374A71BFBE39200464FE9 /* BasePresenter.swift */; };
+		0127BE2F1D242F02004EE63E /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011374A11BFBBF2C00464FE9 /* BaseRouter.swift */; };
+		0127BE301D242F02004EE63E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F89BD1BFF7B62009F7D07 /* BaseViewController.swift */; };
+		0127BE311D242F02004EE63E /* RoutedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0113749E1BFBBE9200464FE9 /* RoutedNavigationController.swift */; };
+		0127BE321D242F02004EE63E /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01062F831BFA6D00005E7C46 /* MainRouter.swift */; };
+		0127BE331D242F02004EE63E /* BillboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01062F881BFA708B005E7C46 /* BillboardRouter.swift */; };
+		0127BE341D242F02004EE63E /* BillboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01062F901BFA7227005E7C46 /* BillboardPresenter.swift */; };
+		0127BE351D242F02004EE63E /* BillboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01062F941BFA72CB005E7C46 /* BillboardViewController.swift */; };
+		0127BE361D242F02004EE63E /* BillboardViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 01062F951BFA72CB005E7C46 /* BillboardViewController.xib */; };
+		0127BE371D242F02004EE63E /* Config.plist in Sources */ = {isa = PBXBuildFile; fileRef = 01B856D71C03AFEB00504CF0 /* Config.plist */; };
+		0127BE391D242F1D004EE63E /* Jalver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0127BE381D242F1D004EE63E /* Jalver.framework */; };
+		0127BE3B1D244187004EE63E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0127BE3A1D244187004EE63E /* Info.plist */; };
 		013F86391C0E2CFE00070167 /* TMDBGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F86381C0E2CFE00070167 /* TMDBGenre.swift */; };
 		013F86411C0E343200070167 /* TMDBProviderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F86401C0E343200070167 /* TMDBProviderTypes.swift */; };
 		013F86431C0E390700070167 /* FilmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013F86421C0E390700070167 /* FilmResponse.swift */; };
@@ -75,6 +144,31 @@
 		01D6AC241CBC2503005FA81B /* GenreMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D6AC201CBC2503005FA81B /* GenreMO.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0118367D1CCF7F5200EFA703 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01062F561BFA6639005E7C46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01062F5D1BFA6639005E7C46;
+			remoteInfo = Kino;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		011836861CCF807300EFA703 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				011836871CCF809100EFA703 /* Nimble.framework in Copy Frameworks */,
+				011836881CCF809100EFA703 /* Quick.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		01026F3C1C5FE97D00500992 /* FilmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
 		01026F3D1C5FE97D00500992 /* FilmTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilmTableViewCell.xib; sourceTree = "<group>"; };
@@ -99,7 +193,13 @@
 		011374A11BFBBF2C00464FE9 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		011374A71BFBE39200464FE9 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		0115351F1C8F71150004ED02 /* Jalver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Jalver.framework; path = Carthage/Build/iOS/Jalver.framework; sourceTree = "<group>"; };
+		011836781CCF7F5100EFA703 /* KinoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		011836821CCF7F7000EFA703 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		011836831CCF7F7000EFA703 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		0120FC861C04FAD200E6460E /* PopularFilmsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularFilmsResponse.swift; sourceTree = "<group>"; };
+		0127BDF81D242A37004EE63E /* KinoHTTPClientSpect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KinoHTTPClientSpect.swift; path = Net/KinoHTTPClient/KinoHTTPClientSpect.swift; sourceTree = "<group>"; };
+		0127BE381D242F1D004EE63E /* Jalver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Jalver.framework; path = "../../Library/Developer/Xcode/DerivedData/Kino-ekoixcfxlfjaozgqvfuhwptjnkny/Build/Products/Debug-iphonesimulator/Jalver.framework"; sourceTree = "<group>"; };
+		0127BE3A1D244187004EE63E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		013F86381C0E2CFE00070167 /* TMDBGenre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TMDBGenre.swift; path = NetEntities/TMDBGenre.swift; sourceTree = "<group>"; };
 		013F86401C0E343200070167 /* TMDBProviderTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDBProviderTypes.swift; sourceTree = "<group>"; };
 		013F86421C0E390700070167 /* FilmResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmResponse.swift; sourceTree = "<group>"; };
@@ -156,6 +256,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		011836751CCF7F5100EFA703 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0127BE391D242F1D004EE63E /* Jalver.framework in Frameworks */,
+				011836841CCF7F7000EFA703 /* Nimble.framework in Frameworks */,
+				011836851CCF7F7000EFA703 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -180,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				01062F601BFA6639005E7C46 /* Kino */,
+				011836791CCF7F5200EFA703 /* KinoTests */,
 				01062F5F1BFA6639005E7C46 /* Products */,
 				CC8F1D9C3902E0C4F85F2BA4 /* Frameworks */,
 			);
@@ -189,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				01062F5E1BFA6639005E7C46 /* Kino.app */,
+				011836781CCF7F5100EFA703 /* KinoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -360,6 +472,31 @@
 				0113749E1BFBBE9200464FE9 /* RoutedNavigationController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		011836791CCF7F5200EFA703 /* KinoTests */ = {
+			isa = PBXGroup;
+			children = (
+				0127BE3A1D244187004EE63E /* Info.plist */,
+				0127BDF61D242A0D004EE63E /* Net */,
+			);
+			path = KinoTests;
+			sourceTree = "<group>";
+		};
+		0127BDF61D242A0D004EE63E /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				0127BDF71D242A14004EE63E /* KinoHTTPClient */,
+			);
+			name = Net;
+			sourceTree = "<group>";
+		};
+		0127BDF71D242A14004EE63E /* KinoHTTPClient */ = {
+			isa = PBXGroup;
+			children = (
+				0127BDF81D242A37004EE63E /* KinoHTTPClientSpect.swift */,
+			);
+			name = KinoHTTPClient;
 			sourceTree = "<group>";
 		};
 		013F86271C0E2AC800070167 /* MOs */ = {
@@ -600,6 +737,9 @@
 		CC8F1D9C3902E0C4F85F2BA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0127BE381D242F1D004EE63E /* Jalver.framework */,
+				011836821CCF7F7000EFA703 /* Nimble.framework */,
+				011836831CCF7F7000EFA703 /* Quick.framework */,
 				0115351F1C8F71150004ED02 /* Jalver.framework */,
 			);
 			name = Frameworks;
@@ -626,18 +766,41 @@
 			productReference = 01062F5E1BFA6639005E7C46 /* Kino.app */;
 			productType = "com.apple.product-type.application";
 		};
+		011836771CCF7F5100EFA703 /* KinoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 011836811CCF7F5200EFA703 /* Build configuration list for PBXNativeTarget "KinoTests" */;
+			buildPhases = (
+				011836741CCF7F5100EFA703 /* Sources */,
+				011836751CCF7F5100EFA703 /* Frameworks */,
+				011836761CCF7F5100EFA703 /* Resources */,
+				011836861CCF807300EFA703 /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0118367E1CCF7F5200EFA703 /* PBXTargetDependency */,
+			);
+			name = KinoTests;
+			productName = KinoTests;
+			productReference = 011836781CCF7F5100EFA703 /* KinoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		01062F561BFA6639005E7C46 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Julian;
 				TargetAttributes = {
 					01062F5D1BFA6639005E7C46 = {
 						CreatedOnToolsVersion = 7.1.1;
+					};
+					011836771CCF7F5100EFA703 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 01062F5D1BFA6639005E7C46;
 					};
 				};
 			};
@@ -655,6 +818,7 @@
 			projectRoot = "";
 			targets = (
 				01062F5D1BFA6639005E7C46 /* Kino */,
+				011836771CCF7F5100EFA703 /* KinoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -669,6 +833,14 @@
 				01062F6F1BFA6639005E7C46 /* LaunchScreen.storyboard in Resources */,
 				01062F6C1BFA6639005E7C46 /* Assets.xcassets in Resources */,
 				01062F971BFA72CB005E7C46 /* BillboardViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		011836761CCF7F5100EFA703 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0127BE3B1D244187004EE63E /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,7 +932,85 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		011836741CCF7F5100EFA703 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0127BDFB1D242F02004EE63E /* ProviderResolvers.swift in Sources */,
+				0127BDFC1D242F02004EE63E /* DataManagerResolvers.swift in Sources */,
+				0127BDFD1D242F02004EE63E /* PresenterResolvers.swift in Sources */,
+				0127BDFE1D242F02004EE63E /* ViewControllerResolvers.swift in Sources */,
+				0127BDFF1D242F02004EE63E /* RouterResolvers.swift in Sources */,
+				0127BE001D242F02004EE63E /* Config.swift in Sources */,
+				0127BE011D242F02004EE63E /* GeneralFunctions.swift in Sources */,
+				0127BE021D242F02004EE63E /* Parseable.swift in Sources */,
+				0127BE031D242F02004EE63E /* PresentersDependenciesResolver.swift in Sources */,
+				0127BE041D242F02004EE63E /* RoutersDependenciesResolver.swift in Sources */,
+				0127BE051D242F02004EE63E /* ViewControllersDependenciesResolver.swift in Sources */,
+				0127BE061D242F02004EE63E /* HTTPClient.swift in Sources */,
+				0127BE071D242F02004EE63E /* KinoHTTPClient.swift in Sources */,
+				0127BE081D242F02004EE63E /* MayBeFull.swift in Sources */,
+				0127BE091D242F02004EE63E /* Response.swift in Sources */,
+				0127BE0A1D242F02004EE63E /* PopularFilmsResponse.swift in Sources */,
+				0127BE0B1D242F02004EE63E /* UpcomingFilmsResponse.swift in Sources */,
+				0127BE0C1D242F02004EE63E /* NowPlayingFilmsResponse.swift in Sources */,
+				0127BE0D1D242F02004EE63E /* FilmResponse.swift in Sources */,
+				0127BE0E1D242F02004EE63E /* FilmReleasesResponse.swift in Sources */,
+				0127BE0F1D242F02004EE63E /* TMDBFilm.swift in Sources */,
+				0127BE101D242F02004EE63E /* TMDBGenre.swift in Sources */,
+				0127BE111D242F02004EE63E /* TMDBFilmRelease.swift in Sources */,
+				0127BE121D242F02004EE63E /* TMDBProviderTypes.swift in Sources */,
+				0127BE131D242F02004EE63E /* BaseProvider.swift in Sources */,
+				0127BE141D242F02004EE63E /* FilmsProvider.swift in Sources */,
+				0127BE151D242F02004EE63E /* URLMaker.swift in Sources */,
+				0127BE161D242F02004EE63E /* PersistenceObject.swift in Sources */,
+				0127BE171D242F02004EE63E /* Repository.swift in Sources */,
+				0127BE181D242F02004EE63E /* CoreDataBuilder.swift in Sources */,
+				0127BE191D242F02004EE63E /* KinoMO+CoreDataProperties.swift in Sources */,
+				0127BE1A1D242F02004EE63E /* KinoMO.swift in Sources */,
+				0127BE1B1D242F02004EE63E /* FilmMO+CoreDataProperties.swift in Sources */,
+				0127BE1C1D242F02004EE63E /* FilmMO.swift in Sources */,
+				0127BE1D1D242F02004EE63E /* FilmReleaseMO+CoreDataProperties.swift in Sources */,
+				0127BE1E1D242F02004EE63E /* FilmReleaseMO.swift in Sources */,
+				0127BE1F1D242F02004EE63E /* GenreMO+CoreDataProperties.swift in Sources */,
+				0127BE201D242F02004EE63E /* GenreMO.swift in Sources */,
+				0127BE211D242F02004EE63E /* CoreDataRepository.swift in Sources */,
+				0127BE221D242F02004EE63E /* FilmRepository.swift in Sources */,
+				0127BE231D242F02004EE63E /* CoreDataManager.swift in Sources */,
+				0127BE241D242F02004EE63E /* Kino.xcdatamodeld in Sources */,
+				0127BE251D242F02004EE63E /* BaseDataManager.swift in Sources */,
+				0127BE261D242F02004EE63E /* FilmDataManager.swift in Sources */,
+				0127BE271D242F02004EE63E /* DomainObject.swift in Sources */,
+				0127BE281D242F02004EE63E /* Film.swift in Sources */,
+				0127BE291D242F02004EE63E /* List.swift in Sources */,
+				0127BE2A1D242F02004EE63E /* Genre.swift in Sources */,
+				0127BE2B1D242F02004EE63E /* FilmRelease.swift in Sources */,
+				0127BE2C1D242F02004EE63E /* FilmTableViewCell.swift in Sources */,
+				0127BE2D1D242F02004EE63E /* FilmTableViewCell.xib in Sources */,
+				0127BE2E1D242F02004EE63E /* BasePresenter.swift in Sources */,
+				0127BE2F1D242F02004EE63E /* BaseRouter.swift in Sources */,
+				0127BE301D242F02004EE63E /* BaseViewController.swift in Sources */,
+				0127BE311D242F02004EE63E /* RoutedNavigationController.swift in Sources */,
+				0127BE321D242F02004EE63E /* MainRouter.swift in Sources */,
+				0127BE331D242F02004EE63E /* BillboardRouter.swift in Sources */,
+				0127BE341D242F02004EE63E /* BillboardPresenter.swift in Sources */,
+				0127BE351D242F02004EE63E /* BillboardViewController.swift in Sources */,
+				0127BE361D242F02004EE63E /* BillboardViewController.xib in Sources */,
+				0127BE371D242F02004EE63E /* Config.plist in Sources */,
+				0127BDFA1D242EEA004EE63E /* RepositoryResolver.swift in Sources */,
+				0127BDF91D242A37004EE63E /* KinoHTTPClientSpect.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0118367E1CCF7F5200EFA703 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01062F5D1BFA6639005E7C46 /* Kino */;
+			targetProxy = 0118367D1CCF7F5200EFA703 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		01062F6D1BFA6639005E7C46 /* LaunchScreen.storyboard */ = {
@@ -891,6 +1141,42 @@
 			};
 			name = Release;
 		};
+		0118367F1CCF7F5200EFA703 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = KinoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.julian.KinoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kino.app/Kino";
+			};
+			name = Debug;
+		};
+		011836801CCF7F5200EFA703 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = KinoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.julian.KinoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kino.app/Kino";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -908,6 +1194,15 @@
 			buildConfigurations = (
 				01062F741BFA6639005E7C46 /* Debug */,
 				01062F751BFA6639005E7C46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		011836811CCF7F5200EFA703 /* Build configuration list for PBXNativeTarget "KinoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0118367F1CCF7F5200EFA703 /* Debug */,
+				011836801CCF7F5200EFA703 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
