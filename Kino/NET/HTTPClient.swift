@@ -46,6 +46,7 @@ extension HTTPClient {
 enum HTTPClientError: Int, ErrorType {
     
     case PageNotFound = 404
+    case AuthenticationFailed = 401
     case DefaultError
     
 }

@@ -12,36 +12,36 @@ class FilmsProvider: BaseProvider {
     
     // MARK: - Popular Films Methods
     func popularFilms(completion: FilmArrayCompletion) {
-        self.connect(Config[Endpoints.PopularFilmsEndpoint] as! String, params: NSDictionary()) { (inner: Void throws -> PopularFilmsResponse) -> Void in
+        self.connect(Config[Endpoints.PopularFilmsEndpoint] as! String, params: nil) { (inner: Void throws -> PopularFilmsResponse) -> Void in
             do {
                 let response = try inner()
                 completion(response.films)
             } catch let error {
-                DLog(error)
+                DLog("popularFilms error: \(error)")
             }
         }
     }
     
     // MARK: - Paying Now Film Methods
     func nowPlayingFilms(completion: FilmArrayCompletion) {
-        self.connect(Config[Endpoints.NowPlayingFilmsEndpoint] as! String, params: NSDictionary()) { (inner: Void throws -> NowPlayingFilmsResponse) -> Void in
+        self.connect(Config[Endpoints.NowPlayingFilmsEndpoint] as! String, params: nil) { (inner: Void throws -> NowPlayingFilmsResponse) -> Void in
             do {
                 let response = try inner()
                 completion(response.films)
             } catch let error {
-                DLog(error)
+                DLog("nowPlayingFilms error: \(error)")
             }
         }
     }
     
     // MARK: - Upcoming Film Methods
     func upcomingFilms(completion: FilmArrayCompletion) {
-        self.connect(Config[Endpoints.UpcomingFilmsEndpoint] as! String, params: NSDictionary()) { (inner: Void throws -> UpcomingFilmsResponse) in
+        self.connect(Config[Endpoints.UpcomingFilmsEndpoint] as! String, params: nil) { (inner: Void throws -> UpcomingFilmsResponse) in
             do {
                 let response = try inner()
                 completion(response.films)
             } catch let error {
-                DLog(error)
+                DLog("upcomingFilms error: \(error)")
             }
         }
     }
@@ -75,7 +75,7 @@ class FilmsProvider: BaseProvider {
                 })
                 
             } catch let error {
-                DLog(error)
+                DLog("completeFilms with name; \(film.title) error: \(error)")
             }
             completion(nil)
         }
@@ -88,7 +88,7 @@ class FilmsProvider: BaseProvider {
                 let response = try inner()
                 completion(response.releaseDates)
             } catch let error {
-                DLog(error)
+                DLog("releaseDatesForFilm with name: \(film.title) error: \(error)")
             }
             completion([TMDBFilmRelease]())
         }

@@ -42,7 +42,7 @@ class CoreDataManager {
     }()
     
     // MARK: - Other Stuff
-    lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = { [weak self] in
+    lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = try! { [weak self] in //try! setted to test target, it gives an error when try! is removed. 😶
         var coordinator = NSPersistentStoreCoordinator(managedObjectModel: self!.managedObjectModel)
         let url = self!.applicationDocumentsDirectory.URLByAppendingPathComponent(CoreDataVars.dataBaseName)
         let options = [NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true]

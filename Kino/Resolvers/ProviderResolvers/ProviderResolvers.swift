@@ -12,7 +12,7 @@ import Jalver
 struct FilmsProviderConfigurator: Configurator {
     
     func configure() -> FilmsProvider {
-        return FilmsProvider(httpClient: KinoHTTPClient(), defaultParams: Config.apiDefaultParams())
+        return FilmsProvider(httpClient: KinoHTTPClient(), maker: Jalver.resolve(URLMakerDefaultConfigurator))
     }
     
 }

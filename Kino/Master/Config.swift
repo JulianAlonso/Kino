@@ -34,7 +34,7 @@ class ConfigSingleton {
     }
     
     // MARK: - Public
-    func apiDefaultParams() -> NSDictionary {
+    func apiDefaultParams() -> Dictionary<String, AnyObject> {
         return [
             "api_key" : Config[API.ApiKey],
         ]

@@ -64,11 +64,9 @@ class KinoHTTPClientSpec: QuickSpec {
                 }
             }
         }
-        
     }
     
 }
-
 
 // MARK: - FakeResponse
 struct MockResponse : Response {
