@@ -102,6 +102,8 @@
 		0159ADFD1D2D80FC0031DCC5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01062F781BFA66CD005E7C46 /* CoreDataManager.swift */; };
 		015F89BE1BFF7B62009F7D07 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015F89BD1BFF7B62009F7D07 /* BaseViewController.swift */; };
 		0163C3D81C0DB1C30043EF6B /* NowPlayingFilmsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0163C3D71C0DB1C30043EF6B /* NowPlayingFilmsResponse.swift */; };
+		018EBBBD1D4A0F2300CE7086 /* UpcomingFilmsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 018EBBBC1D4A0F2300CE7086 /* UpcomingFilmsResponse.json */; };
+		018EBBC01D4A0FB000CE7086 /* MockClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018EBBBF1D4A0FB000CE7086 /* MockClient.swift */; };
 		019C48611C15ED11000FC8AF /* FilmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019C48601C15ED11000FC8AF /* FilmDataManager.swift */; };
 		019C48631C15F08E000FC8AF /* BaseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019C48621C15F08E000FC8AF /* BaseDataManager.swift */; };
 		019F11A41BFF883600809FE4 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019F11A31BFF883600809FE4 /* HTTPClient.swift */; };
@@ -204,6 +206,8 @@
 		0159ADF91D2D6A9A0031DCC5 /* KinoURLMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KinoURLMaker.swift; path = Implementations/KinoURLMaker.swift; sourceTree = "<group>"; };
 		015F89BD1BFF7B62009F7D07 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0163C3D71C0DB1C30043EF6B /* NowPlayingFilmsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayingFilmsResponse.swift; sourceTree = "<group>"; };
+		018EBBBC1D4A0F2300CE7086 /* UpcomingFilmsResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = UpcomingFilmsResponse.json; path = Resources/Stubs/UpcomingFilmsResponse.json; sourceTree = "<group>"; };
+		018EBBBF1D4A0FB000CE7086 /* MockClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockClient.swift; path = Mocking/HTTPClient/MockClient.swift; sourceTree = "<group>"; };
 		019C48601C15ED11000FC8AF /* FilmDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilmDataManager.swift; path = DataManagers/FilmDataManager.swift; sourceTree = "<group>"; };
 		019C48621C15F08E000FC8AF /* BaseDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseDataManager.swift; path = DataManagers/BaseDataManager.swift; sourceTree = "<group>"; };
 		019F11A31BFF883600809FE4 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -471,8 +475,8 @@
 		011836791CCF7F5200EFA703 /* KinoTests */ = {
 			isa = PBXGroup;
 			children = (
-				0127BE3A1D244187004EE63E /* Info.plist */,
 				0127BDF61D242A0D004EE63E /* Net */,
+				018EBBBA1D4A0EEE00CE7086 /* Resources */,
 			);
 			path = KinoTests;
 			sourceTree = "<group>";
@@ -480,6 +484,7 @@
 		0127BDF61D242A0D004EE63E /* Net */ = {
 			isa = PBXGroup;
 			children = (
+				018EBBBE1D4A0F8300CE7086 /* Mocking */,
 				0159ADF51D2D67540031DCC5 /* Components */,
 				0127BDF71D242A14004EE63E /* KinoHTTPClient */,
 			);
@@ -541,6 +546,39 @@
 				0159ADF91D2D6A9A0031DCC5 /* KinoURLMaker.swift */,
 			);
 			name = Implementations;
+			sourceTree = "<group>";
+		};
+		018EBBBA1D4A0EEE00CE7086 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				018EBBBB1D4A0EFA00CE7086 /* Stubs */,
+				0127BE3A1D244187004EE63E /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		018EBBBB1D4A0EFA00CE7086 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				018EBBBC1D4A0F2300CE7086 /* UpcomingFilmsResponse.json */,
+			);
+			name = Stubs;
+			sourceTree = "<group>";
+		};
+		018EBBBE1D4A0F8300CE7086 /* Mocking */ = {
+			isa = PBXGroup;
+			children = (
+				018EBBC11D4A0FB400CE7086 /* HTTPClient */,
+			);
+			name = Mocking;
+			sourceTree = "<group>";
+		};
+		018EBBC11D4A0FB400CE7086 /* HTTPClient */ = {
+			isa = PBXGroup;
+			children = (
+				018EBBBF1D4A0FB000CE7086 /* MockClient.swift */,
+			);
+			name = HTTPClient;
 			sourceTree = "<group>";
 		};
 		019C485F1C15ECFB000FC8AF /* DataManagers */ = {
@@ -851,6 +889,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				018EBBBD1D4A0F2300CE7086 /* UpcomingFilmsResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -965,6 +1004,7 @@
 				0127BE0E1D242F02004EE63E /* FilmReleasesResponse.swift in Sources */,
 				0127BE0F1D242F02004EE63E /* TMDBFilm.swift in Sources */,
 				0127BE101D242F02004EE63E /* TMDBGenre.swift in Sources */,
+				018EBBC01D4A0FB000CE7086 /* MockClient.swift in Sources */,
 				0127BE111D242F02004EE63E /* TMDBFilmRelease.swift in Sources */,
 				0127BE121D242F02004EE63E /* TMDBProviderTypes.swift in Sources */,
 				0127BE131D242F02004EE63E /* BaseProvider.swift in Sources */,
