@@ -9,6 +9,8 @@
 import Foundation
 
 protocol HTTPClient {
+ 
+    func get<T: Response>(url: NSURL, completion: (inner: () throws -> T) -> (Void))
     
 }
 

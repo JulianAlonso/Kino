@@ -22,7 +22,7 @@ class ConfigSingleton {
     private let config: NSDictionary
     
     private init() {
-        if let path = NSBundle.mainBundle().pathForResource("Config", ofType: "plist") {
+        if let path = NSBundle(forClass: ConfigSingleton.self).pathForResource("Config", ofType: "plist") {
             self.config = NSDictionary(contentsOfFile: path)!
         } else {
             config = NSDictionary()

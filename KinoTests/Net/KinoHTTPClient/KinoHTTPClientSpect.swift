@@ -69,7 +69,7 @@ class KinoHTTPClientSpec: QuickSpec {
 }
 
 // MARK: - FakeResponse
-struct MockResponse : Response {
+struct MockResponse: Response {
     
     let data = "Data"
     
